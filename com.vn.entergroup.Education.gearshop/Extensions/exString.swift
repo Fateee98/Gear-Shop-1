@@ -23,7 +23,7 @@ extension String {
     var getNumberCharacter: String {
         let pattern = UnicodeScalar("0")..."9"
         return String(unicodeScalars
-            .flatMap { pattern ~= $0 ? Character($0) : nil })
+            .compactMap { pattern ~= $0 ? Character($0) : nil })
     }
     
     func isValid(regex: RegularExpressions) -> Bool {

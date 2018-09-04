@@ -10,9 +10,18 @@ import UIKit
 
 class CPUCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var mLabelCPU: UILabel!
+    @IBOutlet weak var mLabelPrice: UILabel!
+    @IBOutlet weak var mImgCPU: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    func setdata(data: CPUModel) {
+        mLabelCPU.text = data.title
+        mLabelPrice.text = data.price
+        mImgCPU.image = UIImage(named: data.img)
+    }
 }

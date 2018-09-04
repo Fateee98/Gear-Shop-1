@@ -26,6 +26,8 @@
 		C3574F0D213E9A710089327C /* CPUCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3574F0B213E9A700089327C /* CPUCollectionViewCell.xib */; };
 		C3574F10213E9A8A0089327C /* VGACollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3574F0E213E9A8A0089327C /* VGACollectionViewCell.swift */; };
 		C3574F11213E9A8A0089327C /* VGACollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3574F0F213E9A8A0089327C /* VGACollectionViewCell.xib */; };
+		C3F1BFAE213EDB5800A44814 /* cpu.json in Resources */ = {isa = PBXBuildFile; fileRef = C3F1BFAD213EDB5800A44814 /* cpu.json */; };
+		C3F1BFB0213EDB9900A44814 /* CPUModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F1BFAF213EDB9900A44814 /* CPUModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		C3574F0B213E9A700089327C /* CPUCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CPUCollectionViewCell.xib; sourceTree = "<group>"; };
 		C3574F0E213E9A8A0089327C /* VGACollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGACollectionViewCell.swift; sourceTree = "<group>"; };
 		C3574F0F213E9A8A0089327C /* VGACollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VGACollectionViewCell.xib; sourceTree = "<group>"; };
+		C3F1BFAD213EDB5800A44814 /* cpu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cpu.json; path = ../../../../cpu.json; sourceTree = "<group>"; };
+		C3F1BFAF213EDB9900A44814 /* CPUModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +100,10 @@
 		C3574EEF213E370F0089327C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C3F1BFAD213EDB5800A44814 /* cpu.json */,
 				C3574F02213E785B0089327C /* gearitem.json */,
 				C3574F04213E78780089327C /* CategoryModel.swift */,
+				C3F1BFAF213EDB9900A44814 /* CPUModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F1BFAE213EDB5800A44814 /* cpu.json in Resources */,
 				C3574F11213E9A8A0089327C /* VGACollectionViewCell.xib in Resources */,
 				C3574EE8213E34D10089327C /* LaunchScreen.storyboard in Resources */,
 				C3574F03213E785B0089327C /* gearitem.json in Resources */,
@@ -227,6 +234,7 @@
 				C3574EFA213E3B960089327C /* exString.swift in Sources */,
 				C3574F07213E7FC60089327C /* CategoryProductViewController.swift in Sources */,
 				C3574EF9213E3B960089327C /* exUITableHeaderView.swift in Sources */,
+				C3F1BFB0213EDB9900A44814 /* CPUModel.swift in Sources */,
 				C3574F0C213E9A700089327C /* CPUCollectionViewCell.swift in Sources */,
 				C3574F10213E9A8A0089327C /* VGACollectionViewCell.swift in Sources */,
 				C3574F05213E78780089327C /* CategoryModel.swift in Sources */,

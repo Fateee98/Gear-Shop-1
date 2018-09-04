@@ -13,24 +13,26 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
     @IBOutlet weak var mCollectionView: UICollectionView!
     var mScreenType = screenType.cpu
     
+    var arrData: [CPUModel] = []
     
     @IBOutlet weak var testText: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadDataLocal()
         mCollectionView.register(UINib(nibName: "CPUCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CPUCollectionViewCell")
         mCollectionView.register(UINib(nibName: "VGACollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "VGACollectionViewCell")
         switch mScreenType {
         case screenType.cpu:
-            testText.text = "cpu"
+            
             break
         case screenType.vga:
-            testText.text = "vga"
+            
             break
         case screenType.ram:
-            testText.text = "ram"
+            
             break
         case screenType.mobo:
-            testText.text = "mobo"
+            
             break
             
         default:
@@ -39,17 +41,37 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
         }
         // Do any additional setup after loading the view.
     }
+    
+    func loadDataLocal() {
+        if let path = Bundle.main.path(forResource: "cpu", ofType: "json")
+        {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let listData = jsonResult["data"] as? [Any] {
+                    for item in listData {
+                        let i = CPUModel(data: item as! [String : AnyObject])
+                        arrData.append(i)
+                    }
+                    
+                    mCollectionView.reloadData()
+                }
+            } catch {
+                // handle error
+            }
+        }
+    }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch mScreenType {
         case screenType.cpu:
-            return 10
+            return arrData.count
         case screenType.vga:
-            return 5
+            return arrData.count
         case screenType.ram:
-            return 7
+            return arrData.count
         case screenType.mobo:
-            return 8
+            return arrData.count
             
         default:
             return 0
@@ -64,7 +86,8 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
         
         switch mScreenType {
         case screenType.cpu:
-        cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CPUCollectionViewCell", for: indexPath)
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CPUCollectionViewCell", for: indexPath) as! CPUCollectionViewCell
+            cell.setdata(data: arrData[indexPath.row])
             break
         case screenType.vga:
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VGACollectionViewCell", for: indexPath)

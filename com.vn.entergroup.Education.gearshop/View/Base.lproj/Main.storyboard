@@ -144,11 +144,11 @@
             </objects>
             <point key="canvasLocation" x="-521" y="-41"/>
         </scene>
-        <!--Home-->
+        <!--Navigation Controller-->
         <scene sceneID="gl6-Og-z2z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HtG-or-JqT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="syL-FN-IVL"/>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="syL-FN-IVL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DaS-fx-94W">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
