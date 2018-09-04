@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "image": "cpu",
+      "title": "CPU"
+    },
+    {
+      "image": "vga",
+      "title": "VGA"
+    },
+    {
+      "image": "ram",
+      "title": "Ram"
+    },
+    {
+      "image": "mobo",
+      "title": "Mobo"
+    }
+  ]
+}
