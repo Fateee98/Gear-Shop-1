@@ -80,29 +80,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXB-qR-Sc1">
-                                <rect key="frame" x="156" y="332" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LBh-mf-nde">
-                                <rect key="frame" x="67" y="129" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LBh-mf-nde">
+                                <rect key="frame" x="10" y="74" width="355" height="684"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bje-JK-4Og">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="185" height="172"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TdM-Wv-tPD">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="85" y="0.0" width="185" height="172"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="185" height="172"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                     </collectionViewCell>
@@ -114,16 +106,21 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DHT-6s-c2l" firstAttribute="trailing" secondItem="LBh-mf-nde" secondAttribute="trailing" constant="10" id="RCc-BO-FXT"/>
+                            <constraint firstItem="DHT-6s-c2l" firstAttribute="bottom" secondItem="LBh-mf-nde" secondAttribute="bottom" constant="20" id="eeF-Vl-ZAz"/>
+                            <constraint firstItem="LBh-mf-nde" firstAttribute="top" secondItem="DHT-6s-c2l" secondAttribute="top" constant="30" id="pLT-gS-Xwe"/>
+                            <constraint firstItem="LBh-mf-nde" firstAttribute="leading" secondItem="DHT-6s-c2l" secondAttribute="leading" constant="10" id="t5W-36-9Cy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DHT-6s-c2l"/>
                     </view>
                     <connections>
                         <outlet property="mCollectionView" destination="LBh-mf-nde" id="0hR-Oz-1bA"/>
-                        <outlet property="testText" destination="tXB-qR-Sc1" id="NG8-Sb-4It"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3n-jd-l37" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2021" y="-345"/>
+            <point key="canvasLocation" x="2020" y="-345.07389162561577"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="uQf-EE-mse">

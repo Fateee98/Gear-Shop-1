@@ -8,13 +8,27 @@
 
 import Foundation
 class CPUModel {
-    var img = ""
-    var title = ""
+    var id = ""
+    var name = ""
     var price = ""
+    var socket = ""
+    var speed = ""
+    var core = ""
+    var thread = ""
+    var bus_ram_support = ""
+    var detail = ""
+    var url_image = ""
     
     init(data: [String: AnyObject]) {
-        img = data["img"] as? String ?? ""
-        title = data["title"] as? String ?? ""
+        id = data["id"] as? String ?? ""
+        name = data["name"] as? String ?? ""
         price = data["price"] as? String ?? ""
+        socket = data["socket"] as? String ?? ""
+        speed = data["speed"] as? String ?? ""
+        core = data["core"] as? String ?? ""
+        thread = data["thread"] as? String ?? ""
+        bus_ram_support = data["bus_ram_support"] as? String ?? ""
+        detail = data["detail"] as? String ?? ""
+        url_image = data["url_image"] as? String ?? ""
     }
 }

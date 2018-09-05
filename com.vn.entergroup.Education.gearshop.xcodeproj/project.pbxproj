@@ -26,11 +26,15 @@
 		C3574F0D213E9A710089327C /* CPUCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3574F0B213E9A700089327C /* CPUCollectionViewCell.xib */; };
 		C3574F10213E9A8A0089327C /* VGACollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3574F0E213E9A8A0089327C /* VGACollectionViewCell.swift */; };
 		C3574F11213E9A8A0089327C /* VGACollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3574F0F213E9A8A0089327C /* VGACollectionViewCell.xib */; };
-		C3F1BFAE213EDB5800A44814 /* cpu.json in Resources */ = {isa = PBXBuildFile; fileRef = C3F1BFAD213EDB5800A44814 /* cpu.json */; };
+		C3664DFA213F906F00989F17 /* document.json in Resources */ = {isa = PBXBuildFile; fileRef = C3664DF9213F906F00989F17 /* document.json */; };
 		C3F1BFB0213EDB9900A44814 /* CPUModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F1BFAF213EDB9900A44814 /* CPUModel.swift */; };
+		D535A0F59C9EFBFE8CF52642 /* Pods_com_vn_entergroup_Education_gearshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3324D4482762210D3E8EBB /* Pods_com_vn_entergroup_Education_gearshop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		030E84F8E728C59EE3036F6E /* Pods-com.vn.entergroup.Education.gearshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.vn.entergroup.Education.gearshop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-com.vn.entergroup.Education.gearshop/Pods-com.vn.entergroup.Education.gearshop.debug.xcconfig"; sourceTree = "<group>"; };
+		0E3324D4482762210D3E8EBB /* Pods_com_vn_entergroup_Education_gearshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_com_vn_entergroup_Education_gearshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DD609D40F75326A31BE2B42 /* Pods-com.vn.entergroup.Education.gearshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.vn.entergroup.Education.gearshop.release.xcconfig"; path = "Pods/Target Support Files/Pods-com.vn.entergroup.Education.gearshop/Pods-com.vn.entergroup.Education.gearshop.release.xcconfig"; sourceTree = "<group>"; };
 		C3574EDA213E34BE0089327C /* com.vn.entergroup.Education.gearshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = com.vn.entergroup.Education.gearshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3574EDD213E34BE0089327C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3574EE2213E34BE0089327C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,7 +56,7 @@
 		C3574F0B213E9A700089327C /* CPUCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CPUCollectionViewCell.xib; sourceTree = "<group>"; };
 		C3574F0E213E9A8A0089327C /* VGACollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGACollectionViewCell.swift; sourceTree = "<group>"; };
 		C3574F0F213E9A8A0089327C /* VGACollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VGACollectionViewCell.xib; sourceTree = "<group>"; };
-		C3F1BFAD213EDB5800A44814 /* cpu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cpu.json; path = ../../../../cpu.json; sourceTree = "<group>"; };
+		C3664DF9213F906F00989F17 /* document.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = document.json; sourceTree = "<group>"; };
 		C3F1BFAF213EDB9900A44814 /* CPUModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D535A0F59C9EFBFE8CF52642 /* Pods_com_vn_entergroup_Education_gearshop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +77,8 @@
 			children = (
 				C3574EDC213E34BE0089327C /* com.vn.entergroup.Education.gearshop */,
 				C3574EDB213E34BE0089327C /* Products */,
+				E20ACDFCECD323FB6A8BC258 /* Pods */,
+				FEEBFC45F4E479A3A62FB1E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,7 +107,7 @@
 		C3574EEF213E370F0089327C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C3F1BFAD213EDB5800A44814 /* cpu.json */,
+				C3664DF9213F906F00989F17 /* document.json */,
 				C3574F02213E785B0089327C /* gearitem.json */,
 				C3574F04213E78780089327C /* CategoryModel.swift */,
 				C3F1BFAF213EDB9900A44814 /* CPUModel.swift */,
@@ -152,6 +159,23 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		E20ACDFCECD323FB6A8BC258 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				030E84F8E728C59EE3036F6E /* Pods-com.vn.entergroup.Education.gearshop.debug.xcconfig */,
+				9DD609D40F75326A31BE2B42 /* Pods-com.vn.entergroup.Education.gearshop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FEEBFC45F4E479A3A62FB1E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E3324D4482762210D3E8EBB /* Pods_com_vn_entergroup_Education_gearshop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3574EEC213E34D10089327C /* Build configuration list for PBXNativeTarget "com.vn.entergroup.Education.gearshop" */;
 			buildPhases = (
+				8143A4A5239F24663041D28A /* [CP] Check Pods Manifest.lock */,
 				C3574ED6213E34BE0089327C /* Sources */,
 				C3574ED7213E34BE0089327C /* Frameworks */,
 				C3574ED8213E34BE0089327C /* Resources */,
+				7D50D10C2D8F2D382AA83950 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,11 +236,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3F1BFAE213EDB5800A44814 /* cpu.json in Resources */,
 				C3574F11213E9A8A0089327C /* VGACollectionViewCell.xib in Resources */,
 				C3574EE8213E34D10089327C /* LaunchScreen.storyboard in Resources */,
 				C3574F03213E785B0089327C /* gearitem.json in Resources */,
 				C3574EE5213E34D10089327C /* Assets.xcassets in Resources */,
+				C3664DFA213F906F00989F17 /* document.json in Resources */,
 				C3574EE3213E34BE0089327C /* Main.storyboard in Resources */,
 				C3574F01213E72E20089327C /* GearItemTableViewCell.xib in Resources */,
 				C3574F0D213E9A710089327C /* CPUCollectionViewCell.xib in Resources */,
@@ -222,6 +248,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7D50D10C2D8F2D382AA83950 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-com.vn.entergroup.Education.gearshop/Pods-com.vn.entergroup.Education.gearshop-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-com.vn.entergroup.Education.gearshop/Pods-com.vn.entergroup.Education.gearshop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8143A4A5239F24663041D28A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-com.vn.entergroup.Education.gearshop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C3574ED6213E34BE0089327C /* Sources */ = {
@@ -382,6 +447,7 @@
 		};
 		C3574EED213E34D10089327C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 030E84F8E728C59EE3036F6E /* Pods-com.vn.entergroup.Education.gearshop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -403,6 +469,7 @@
 		};
 		C3574EEE213E34D10089327C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DD609D40F75326A31BE2B42 /* Pods-com.vn.entergroup.Education.gearshop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;

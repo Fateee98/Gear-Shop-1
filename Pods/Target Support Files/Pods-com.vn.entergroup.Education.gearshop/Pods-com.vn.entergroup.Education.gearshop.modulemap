@@ -1,0 +1,6 @@
+framework module Pods_com_vn_entergroup_Education_gearshop {
+  umbrella header "Pods-com.vn.entergroup.Education.gearshop-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,298 @@
+{
+    "Ram": [
+            {
+            "id": 1,
+            "name": "DDRam 4 AVEXIR 8GB/2400 (1*8GB) 1COR - Core (Tản nhiệt -Led đỏ)",
+            "price": "1899000 VND",
+            "memory": "8GB",
+            "bus": "2400Mhz",
+            "type": "DDR4",
+            "detail": "Với XMP sẽ tối ưu hóa bộ nhớ được phát triển bởi INTEL. Các bo mạch chủ được hỗ trợ và nâng cao hiệu năng thông qua BIOS, chỉ với một cú nhấp chuột bằng cách chọn XMP trong BIOS và đã sẵn sàng sử dụng , RAM của AVEXIR đều được trang bị bộ phận bảo vệ để tránh oxy hóa không khí và nước trước khi người dùng mở gói, AVEXIR là nhà sản xuất RAM duy nhất cung cấp loại bảo vệ này cho thấy sự cẩn thận của hãng đối với sản phẩm",
+            "url_image": "https://hanoicomputercdn.com/media/product/31777_1cor.jpg"
+            },
+            {
+            "id": 2,
+            "name": "Kit Ram 4 Gskill 16GB/2400",
+            "price": "4390000 VND",
+            "memory": "8GB",
+            "bus": "2400Mhz",
+            "type": "DDR4",
+            "detail": "",
+            "url_image": "https://hanoicomputercdn.com/media/product/43022_rags322.jpg"
+            },
+            {
+            "id": 3,
+            "name": "Kit Ram 4 Kingston Predator RGB 8GB/2933",
+            "price": "5799000 VND",
+            "memory": "8GB",
+            "bus": "2400Mhz",
+            "type": "DDR4",
+            "detail": "",
+            "url_image": "https://hanoicomputercdn.com/media/product/42505_rakt224.jpg"
+            },
+            {
+            "id": 4,
+            "name": "DDRam 4 Adata 8GB/2400 XPG GAMMIX D10 Black",
+            "price": "5799000 VND",
+            "memory": "8GB",
+            "bus": "2400Mhz",
+            "type": "DDR4",
+            "detail": "Tản nhiệt bắt mắt, D10 có một bộ tản nhiệt bắt mắt với một tấm chắn mở rộng để tản tốt hơn cho hiệu năng làm mát tuyệt vời, DDR4  hiệu năng cao và tiết kiệm năng lượng, GAMMIX D10 hỗ trợ nền tảng Intel X299 mới với cài đặt SPD 2666MHz, Điện áp hoạt động là 1.2V so với 1.5V trên bộ nhớ DDR3 cũ, giúphệ thống làm mát, ổn định hơn và tiết kiệm năng lượng hơn",
+            "url_image": "https://hanoicomputercdn.com/media/product/30167_untitled.jpg"
+            },
+            {
+            "id": 5,
+            "name": "DDRam 4 ANTECMEMORY 8GB/2400 5S - RGB",
+            "price": "1999000 VND",
+            "memory": "8GB",
+            "bus": "2400Mhz",
+            "type": "DDR4",
+            "detail": "",
+            "url_image": "https://hanoicomputercdn.com/media/product/41555_raan005.jpg"
+            }
+            ],
+    "Cpu": [
+            {
+            "id": 1,
+            "name": "CPU Intel Core i7 - 7820X 3.6 GHz Turbo 4.3 Up to 4.5 GHz / 11MB / 8 Cores, 16 Threads / socket 2066",
+            "price": "15.299.000 VND",
+            "socket": "Intel LGA 2066",
+            "speed": "3.6 GHz Turbo 4.3 GHz Up to 4.5 GHz",
+            "core": "8",
+            "thread": "16",
+            "bus_ram_support": "DDR4-2666 MHz",
+            "detail": "Sử dụng socket 2066 chạy trên mainboard X299 mới nhất và rất nhiều nâng cấp. CPU này sở hữu tính năng Turbo Boost Max 3.0. Nhờ công nghệ này, xung nhịp đơn và đôi nhân của CPU có thể được tăng lên đáng kể, tối đa 4.5 mà chưa cần OC, Bộ nhớ đệm được chia sẻ tối ưu và cân bằng, Intel Core i7 - 7820X bộ đệm tối đa trên mỗi nhân là 1.375 MB và sử dụng công nghệ bộ nhớ MLC sẽ mang lại hiệu năng xử lý cao hơn với độ trễ thấp, Số lane PCIe hỗ trợ là 28, cùng 4 kênh RAM DDR4 tại 2666. Mức tiêu thụ điện năng chỉ 140W. Sản phẩm này nhắm tới phân khúc người dụng máy trạm làm việc sản xuất nội dung số, game thủ và cộng đồng OC.",
+            "url_image": "https://hanoicomputercdn.com/media/product/36792_intel_core_i7_7820x_box.jpg"
+            },
+            {
+            "id": 2,
+            "name": "CPU Intel Core i7 8700 3.2Ghz Turbo Up to 4.6Ghz / 12MB / 6 Cores, 12 Threads / Socket 1151 v2 (Coffee Lake )",
+            "price": "8.199.000 VND",
+            "socket": "1151 V2 (Yêu cầu sử dụng mainboard 300 Series chipset)",
+            "speed": "3.2GHz Turbo Up to 4.6GHz",
+            "core": "6",
+            "thread": "12",
+            "bus_ram_support": "DDR4-2666 MHz",
+            "detail": "Thế hệ thứ 8 của dòng Core i với tên gọi Coffee Lake. Sử dụng socket 1151V2 và chạy trên các mainboard 300 series chipset, Sản phẩm Intel Core i7 8700 có mức xung nhịp 3.2 GHz và có thể turbo lên mức 4.6 GHz, 6 nhân / 12 luồng, 12MB Cache hỗ trợ Ram DDR4 2666, Đây là CPU xử lý đa nhiệm tuyệt vời cho Game, giải trí đa phương tiện cao cấp cùng các ứng dụng làm việc mạnh mẽ.",
+            "url_image": "https://hanoicomputercdn.com/media/product/37775_intel_coffeelake_i7_box.jpg"
+            },
+            {
+            "id": 3,
+            "name": "CPU Intel Core i7 - 7800X 3.5 GHz Turbo 4.0 GHz / 8.25MB / 6 Cores, 12 Threads / socket 2066",
+            "price": "10.299.000 VND",
+            "socket": "1151 V2 (Yêu cầu sử dụng mainboard 300 Series chipset)",
+            "speed": "3.2GHz Turbo Up to 4.6GHz",
+            "core": "6",
+            "thread": "12",
+            "bus_ram_support": "DDR4-2666 MHz",
+            "detail": "Thế hệ thứ 8 của dòng Core i với tên gọi Coffee Lake. Sử dụng socket 1151V2 và chạy trên các mainboard 300 series chipset, Sản phẩm Intel Core i7 8700 có mức xung nhịp 3.2 GHz và có thể turbo lên mức 4.6 GHz, 6 nhân / 12 luồng, 12MB Cache hỗ trợ Ram DDR4 2666, Đây là CPU xử lý đa nhiệm tuyệt vời cho Game, giải trí đa phương tiện cao cấp cùng các ứng dụng làm việc mạnh mẽ.",
+            "url_image": "https://hanoicomputercdn.com/media/product/37775_intel_coffeelake_i7_box.jpg"
+            },
+            {
+            "id": 4,
+            "name": "CPU Intel Core i7 8086K 4.0 Ghz Turbo Up to 5.0Ghz / 12MB / 6 Cores, 12 Threads / Socket 1151 v2 (Coffee Lake )",
+            "price": "11.999.000 VND",
+            "socket": "Socket 1151 v2",
+            "speed": "4.0 GHz Max turbo 5.0 GHz",
+            "core": "6",
+            "thread": "12",
+            "bus_ram_support": "DDR4-2666 MHz",
+            "detail": "Bộ vi xử lý Intel Core i7-8086K thế hệ thứ 8 kỷ niệm sự ra mắt của Intel về bộ vi xử lý đầu tiên trong dòng x86. Được giới thiệu vào ngày 8 tháng 6 năm 1978, 8086 ban đầu là bộ vi xử lý 16 bit đầu tiên và bộ vi xử lý này có khả năng tính toán cá nhân hiện đại,Bộ vi xử lý này sẽ bao gồm 6 nhân, tốc độ xung nhịp cơ bản là 4GHz và có thể tăng tốc tối đa lên 5GHz",
+            "url_image": "https://hanoicomputercdn.com/media/product/42690_intel_core_i7_8086k_40th_anniversary_hnc.jpg"
+            },
+{
+            "id": 4,
+            "name": "CPU Intel Core i7 8086K 4.0 Ghz Turbo Up to 5.0Ghz / 12MB / 6 Cores, 12 Threads / Socket 1151 v2 (Coffee Lake )",
+            "price": "11.999.000 VND",
+            "socket": "Socket 1151 v2",
+            "speed": "4.0 GHz Max turbo 5.0 GHz",
+            "core": "6",
+            "thread": "12",
+            "bus_ram_support": "DDR4-2666 MHz",
+            "detail": "Bộ vi xử lý Intel Core i7-8086K thế hệ thứ 8 kỷ niệm sự ra mắt của Intel về bộ vi xử lý đầu tiên trong dòng x86. Được giới thiệu vào ngày 8 tháng 6 năm 1978, 8086 ban đầu là bộ vi xử lý 16 bit đầu tiên và bộ vi xử lý này có khả năng tính toán cá nhân hiện đại,Bộ vi xử lý này sẽ bao gồm 6 nhân, tốc độ xung nhịp cơ bản là 4GHz và có thể tăng tốc tối đa lên 5GHz",
+            "url_image": "https://hanoicomputercdn.com/media/product/42690_intel_core_i7_8086k_40th_anniversary_hnc.jpg"
+            },
+{
+            "id": 4,
+            "name": "CPU Intel Core i7 8086K 4.0 Ghz Turbo Up to 5.0Ghz / 12MB / 6 Cores, 12 Threads / Socket 1151 v2 (Coffee Lake )",
+            "price": "11.999.000 VND",
+            "socket": "Socket 1151 v2",
+            "speed": "4.0 GHz Max turbo 5.0 GHz",
+            "core": "6",
+            "thread": "12",
+            "bus_ram_support": "DDR4-2666 MHz",
+            "detail": "Bộ vi xử lý Intel Core i7-8086K thế hệ thứ 8 kỷ niệm sự ra mắt của Intel về bộ vi xử lý đầu tiên trong dòng x86. Được giới thiệu vào ngày 8 tháng 6 năm 1978, 8086 ban đầu là bộ vi xử lý 16 bit đầu tiên và bộ vi xử lý này có khả năng tính toán cá nhân hiện đại,Bộ vi xử lý này sẽ bao gồm 6 nhân, tốc độ xung nhịp cơ bản là 4GHz và có thể tăng tốc tối đa lên 5GHz",
+            "url_image": "https://hanoicomputercdn.com/media/product/42690_intel_core_i7_8086k_40th_anniversary_hnc.jpg"
+            },
+{
+            "id": 4,
+            "name": "CPU Intel Core i7 8086K 4.0 Ghz Turbo Up to 5.0Ghz / 12MB / 6 Cores, 12 Threads / Socket 1151 v2 (Coffee Lake )",
+            "price": "11.999.000 VND",
+            "socket": "Socket 1151 v2",
+            "speed": "4.0 GHz Max turbo 5.0 GHz",
+            "core": "6",
+            "thread": "12",
+            "bus_ram_support": "DDR4-2666 MHz",
+            "detail": "Bộ vi xử lý Intel Core i7-8086K thế hệ thứ 8 kỷ niệm sự ra mắt của Intel về bộ vi xử lý đầu tiên trong dòng x86. Được giới thiệu vào ngày 8 tháng 6 năm 1978, 8086 ban đầu là bộ vi xử lý 16 bit đầu tiên và bộ vi xử lý này có khả năng tính toán cá nhân hiện đại,Bộ vi xử lý này sẽ bao gồm 6 nhân, tốc độ xung nhịp cơ bản là 4GHz và có thể tăng tốc tối đa lên 5GHz",
+            "url_image": "https://hanoicomputercdn.com/media/product/42690_intel_core_i7_8086k_40th_anniversary_hnc.jpg"
+            },
+{
+            "id": 4,
+            "name": "CPU Intel Core i7 8086K 4.0 Ghz Turbo Up to 5.0Ghz / 12MB / 6 Cores, 12 Threads / Socket 1151 v2 (Coffee Lake )",
+            "price": "11.999.000 VND",
+            "socket": "Socket 1151 v2",
+            "speed": "4.0 GHz Max turbo 5.0 GHz",
+            "core": "6",
+            "thread": "12",
+            "bus_ram_support": "DDR4-2666 MHz",
+            "detail": "Bộ vi xử lý Intel Core i7-8086K thế hệ thứ 8 kỷ niệm sự ra mắt của Intel về bộ vi xử lý đầu tiên trong dòng x86. Được giới thiệu vào ngày 8 tháng 6 năm 1978, 8086 ban đầu là bộ vi xử lý 16 bit đầu tiên và bộ vi xử lý này có khả năng tính toán cá nhân hiện đại,Bộ vi xử lý này sẽ bao gồm 6 nhân, tốc độ xung nhịp cơ bản là 4GHz và có thể tăng tốc tối đa lên 5GHz",
+            "url_image": "https://hanoicomputercdn.com/media/product/42690_intel_core_i7_8086k_40th_anniversary_hnc.jpg"
+            },
+{
+            "id": 4,
+            "name": "CPU Intel Core i7 8086K 4.0 Ghz Turbo Up to 5.0Ghz / 12MB / 6 Cores, 12 Threads / Socket 1151 v2 (Coffee Lake )",
+            "price": "11.999.000 VND",
+            "socket": "Socket 1151 v2",
+            "speed": "4.0 GHz Max turbo 5.0 GHz",
+            "core": "6",
+            "thread": "12",
+            "bus_ram_support": "DDR4-2666 MHz",
+            "detail": "Bộ vi xử lý Intel Core i7-8086K thế hệ thứ 8 kỷ niệm sự ra mắt của Intel về bộ vi xử lý đầu tiên trong dòng x86. Được giới thiệu vào ngày 8 tháng 6 năm 1978, 8086 ban đầu là bộ vi xử lý 16 bit đầu tiên và bộ vi xử lý này có khả năng tính toán cá nhân hiện đại,Bộ vi xử lý này sẽ bao gồm 6 nhân, tốc độ xung nhịp cơ bản là 4GHz và có thể tăng tốc tối đa lên 5GHz",
+            "url_image": "https://hanoicomputercdn.com/media/product/42690_intel_core_i7_8086k_40th_anniversary_hnc.jpg"
+            },
+{
+            "id": 4,
+            "name": "CPU Intel Core i7 8086K 4.0 Ghz Turbo Up to 5.0Ghz / 12MB / 6 Cores, 12 Threads / Socket 1151 v2 (Coffee Lake )",
+            "price": "11.999.000 VND",
+            "socket": "Socket 1151 v2",
+            "speed": "4.0 GHz Max turbo 5.0 GHz",
+            "core": "6",
+            "thread": "12",
+            "bus_ram_support": "DDR4-2666 MHz",
+            "detail": "Bộ vi xử lý Intel Core i7-8086K thế hệ thứ 8 kỷ niệm sự ra mắt của Intel về bộ vi xử lý đầu tiên trong dòng x86. Được giới thiệu vào ngày 8 tháng 6 năm 1978, 8086 ban đầu là bộ vi xử lý 16 bit đầu tiên và bộ vi xử lý này có khả năng tính toán cá nhân hiện đại,Bộ vi xử lý này sẽ bao gồm 6 nhân, tốc độ xung nhịp cơ bản là 4GHz và có thể tăng tốc tối đa lên 5GHz",
+            "url_image": "https://hanoicomputercdn.com/media/product/42690_intel_core_i7_8086k_40th_anniversary_hnc.jpg"
+            },
+            {
+            "id": 5,
+            "name": "CPU Intel Core i7-7700 3.6 GHz / 8MB / HD 630 Series Graphics / Socket 1151 (Kabylake)",
+            "price": "819.9000 VND",
+            "socket": "Socket 1151",
+            "speed": "3.6 GHz Turbo 4.2 GHz",
+            "core": "4",
+            "thread": "8",
+            "bus_ram_support": "DDR4 2133/2400/3000… MHz",
+            "detail": "INTEL đã chính thức ra mắt dòng CPU thế hệ thứ 7 của mình với tên mã Kaby Lake. Đây vẫn là dòng CPU được sản xuất trên công nghệ 14nm của Intel, nhưng đã được cải tiến đáng kể về hiệu năng xử lý đồ họa và tiết kiệm điện năng. Các CPU Kaby Lake sẽ tập trung rất nhiều vào khả năng xử lý đồ họa, đặc biệt là video với độ phân giải 4K, các video 360 độ và công nghệ thực tế ảo. Đồng thời hiệu năng xử lý các ứng dụng cũng được tăng lên 12%, còn hiệu năng duyệt web cao hơn 19% so với Skylake. Đặc biệt các dòng CPU sử dụng cho laptop mỏng, nhẹ sẽ đem lại hiệu năng và thời lượng pin được cải thiện rất nhiều,Đi cùng với những CPU thế hệ mới, sẽ là các dòng chipset mới – với các tên mã cụ thể Z270, H270, B250, H110 Q270, Q250. Một tin tốt lành, đó là các bo mạch chủ Skylake 100 series hiện tại vẫn có thể sử dụng CPU Kaby Lake, thông qua việc update BIOS từ trang chủ của các hãng sản xuất. Điều đó cũng đồng nghĩa với việc, các chipset 200 series này sẽ tập trung chủ yếu vào việc cập nhật các tính năng. Trước hết, chipset Z270 sẽ hỗ trợ 24 lanes PCI-Express Gen 3.0, so với 20 lanes của Z170. Từ đó, các mainboard có thể hỗ trợ đến 3 khe M.2 PCI-E x4, và hầu hết chúng đều sẽ có ít nhất 2 khe cắm.",
+            "url_image": "https://hanoicomputercdn.com/media/product/34597_i7_7700.jpg"
+            }
+            ],
+    "Main": [
+             {
+             "id": 1,
+             "name": "Mainboard ASUS ROG STRIX B360-G GAMING",
+             "price": "2549000 VND",
+             "chipset/socket": "Intel® B360",
+             "CPU_support": "Intel® Socket 1151 for 8th Generation Core™ Processors",
+             "RAM": "4 x DIMM, Max. 64GB, DDR4 2666/2400/2133 MHz Non-ECC, Un-buffered, Register Memory, Dual Channel Memory Architecture, Supports Intel® Extreme Memory Profile (XMP)",
+             "Lan/Wireless": "Intel® I219V",
+             "detail": "",
+             "url_image": "https://hanoicomputercdn.com/media/product/41783_3.jpg"
+             },
+             {
+             "id": 2,
+             "name": "Mainboard Asus H110M- CS ( tray)",
+             "price": "1499000 VND",
+             "chipset/socket": "Intel® H110",
+             "CPU_support": "Intel® Socket 1151 for 6th Generation Core™ i7/Core™ i5/Core™ i3/Pentium®/Celeron® Processors",
+             "Lan/Wireless": "Realtek® RTL8111H",
+             "detail": "",
+             "url_image": "https://hanoicomputercdn.com/media/product/38297_1.jpg"
+             },
+             {
+             "id": 3,
+             "name": "Mainboard ASUS H110M-D",
+             "price": "1629000 VND",
+             "chipset/socket": "Intel® H110",
+             "CPU_support": "Intel® Socket 1151 for 6th Generation Core™ i7/Core™ i5/Core™ i3/Pentium®/Celeron® Processors,Supports Intel® 14 nm CPU,Supports Intel® Turbo Boost Technology 2.0",
+             "Lan/Wireless": "Realtek® RTL8111H",
+             "detail": "",
+             "url_image": "https://hanoicomputercdn.com/media/product/38297_1.jpg"
+             },
+             {
+             "id": 4,
+             "name": "Mainboard ASUS Z10PA-D8C (DUAL CPU WORKSTATION)",
+             "price": "9199000 VND",
+             "chipset/socket": "Intel® C612 PCH",
+             "CPU_support": "2 x Socket R3 (LGA 2011-3; Square type 80x80mm),Intel® Xeon® processor E5-2600 v4 product family,Intel® Xeon® processor E5-2600 v3 product family,QPI 6.4 / 8.0 / 9.6 GT/s",
+             "Lan/Wireless": "",
+             "detail": "",
+             "url_image": "https://hanoicomputercdn.com/media/product/33404_mbas408_1.jpg"
+             },
+             {
+             "id": 5,
+             "name": "Mainboard Asus PRIME B250M-A",
+             "price": "2159000 VND",
+             "chipset/socket": "Intel® B250",
+             "CPU_support": "Intel® Socket 1151 cho Thế hệ thứ 7/thứ 6 Core™ i7/Core™ i5/Core™ i3/Pentium®/Celeron® Bộ vi xử lý Hỗ trợ Intel® 14 nm CPU",
+             "Lan/Wireless": "Realtek® RTL8111H, 1 x Bộ điều khiển Gigabit LAN,ASUS LAN Guard",
+             "detail": "",
+             "url_image": "https://hanoicomputercdn.com/media/product/40840_1.png"
+             }
+             ],
+    "VGA": [
+            {
+            "id": 1,
+            "name": "VGA ASUS ROG STRIX-GTX1050TI-O4G-GAMING (128bits)",
+            "price": "5899000 VND",
+            "bus_standard": "PCI Express 3.0",
+            "resolution": "Digital Max Resolution:7680x4320",
+            "video_memory": "GDDR5 4GB",
+            "Recommended PSU": "600W",
+            "detail": "Xung máy 1506 MHz trong chế độ ép xung cho trải nghiệm chơi game 1080p tuyệt vời. DirectCU II với Thiết kế Quạt 0dB Hình Cánh được cấp bằng sáng chế cho hiệu năng mát hơn 30% và yên tĩnh gấp 3 lần. ASUS FanConnect với đầu cắm 4 pin điều khiển bằng GPU, được kết nối với quạt của hệ thống cho hiệu năng làm mát tối ưu. Công nghệ sản xuất tự động Auto-Extreme duy nhất trong ngành với Sức mạnh Siêu Hợp kim II cho chất lượng cao cấp và độ ổn định tốt nhất. ",
+            "url_image": "https://hanoicomputercdn.com/media/product/41783_3.jpg"
+            },
+            {
+            "id": 2,
+            "name": "VGA Card nVidia Quadro P5000 16GB DDR5",
+            "price": "49999000 VND",
+            "bus_standard": "PCI Express 3.0 x16",
+            "resolution": "HDR 7680 x 4320 at 30Hz (30-bit color),HDR 5120 x 2880 at 60Hz (30-bit color),HDR 4096 x 2160 at 60Hz or 3840 x 2160 at 60Hz,2560 x 1600 at 60Hz via 3rd party adapter,1920 x 1200 at 60Hz via included adapter",
+            "video_memory": "16GB GDDR5X 256-bit",
+            "Recommended PSU": "600W",
+            "detail": "Sản phẩm này hỗ trợ cho các ứng dụng khá tốt, tốt nhất là các ứng dụng chuyên về 3D như 3DS MAX, MAYA hoàn hảo. Với các ứng dụng dựng phim như Adobe Premiere và Adobe After Effect, 2 sản phẩm này là thiết yếu không thể thiếu của các Studio vừa và nhỏ. Các Studio lớn, xưởng phim hay đài truyền hình thì các giải pháp sử dụng card đồ họa Quadro từ P5000 trở lên là sản phẩm tốt để nâng cấp hoặc đầu tư mua mới. ",
+            "url_image": "https://hanoicomputercdn.com/media/product/34211_nvidia_quadro_p5000_box.jpg"
+            },
+            {
+            "id": 3,
+            "name": "Vga GIGABYTE tm N108TAORUS-WB-11GD GeForce® GTX 1080 Ti",
+            "price": "28899000 VND",
+            "bus_standard": "PCI-E 3.0 x 16",
+            "resolution": "7680x4320",
+            "video_memory": "11GB GDDR5X",
+            "Recommended PSU": "600W",
+            "detail": "Aorus đém lại giải pháp làm mát cho tất cả các thành phần quan trọng của card đồ họa. chúng không chỉ tập trung làm mát GPU mà còn cả VRAM và MOSFET, Các card đồ họa Aorus sử dụng các cuộc cảm và tụ cao cấp như trên Titan X, mang lại hiệu suất cao và kéo dài tuổi thọ, Tối ưu hóa lưu lượng chất lỏng của Waterblock sẽ nhanh chóng hút nhiệt từ tấm đồng tản nhiệt mà không hề gây tiếng ồn, đem đến sự thoải mái và hiệu năng cao khi chơi game",
+            "url_image": "https://hanoicomputercdn.com/media/product/37225_2017061620261798_big.jpg"
+            },
+            {
+            "id": 4,
+            "name": "Vga ASUS ROG Poseidon GTX 1080TI P11G Gaming",
+            "price": "27499000 VND",
+            "bus_standard": "PCI Express 3.0",
+            "resolution": "Digital Max Resolution:7680x4320",
+            "video_memory": "11GB GDDR5X",
+            "Recommended PSU": "600W",
+            "detail": "Sự linh hoạt toàn diện cho phép bạn lựa chọn làm mát bằng không khí hay bằng chất lỏng,Công nghệ DirectCU H2O Thế hệ Kế tiếp là một giải pháp tản nhiệt lai kết hợp khoang bốc hơi và làm mát bằng nước. So với thiết kế của thế hệ trước, tốc độ luồng nước trong kênh của DirectCU H2O đã được tăng 22% cho khả năng tản nhiệt tốt hơn. ROG Poseidon mới được chế tạo với bộ làm mát 2,5 rãnh lớn hơn, cho diện tích bề mặt tản nhiệt lớn hơn 40% so với các thiết kế 2 rãnh trước đây, dẫn đến nhiệt độ thấp hơn và hiệu năng yên tĩnh hơn. ",
+            "url_image": "https://hanoicomputercdn.com/media/product/36585_vgas401_1.jpg"
+            },
+            {
+            "id": 5,
+            "name": "Vga Card MSI GTX 1080Ti LIGHTNING Z 11GB",
+            "price": "26899000 VND",
+            "bus_standard": "PCI Express x16 3.0",
+            "resolution": "Digital Max Resolution:7680x4320",
+            "video_memory": "11GB GDDR5X",
+            "Recommended PSU": "750 W",
+            "detail": "Card đồ họa MSI LIGHTNING là sự hoàn thiện về thiết kế. Sử dụng các thành phần tốt nhất và các công nghệ thiết kế hàng đầu trong ngành, các card đồ hoạ MSI LIGHTNING đã luôn là dòng card ép xung thuộc top thế giới trong nhiều năm. Nâng cao khả năng làm mát, thiết kế cao cấp và trải nghiệm vượt trội giúp cho sản phẩm trở thành sự lựa chọn tốt nhất cho những người tìm kiếm hiệu suất cao nhất ",
+            "url_image": "https://hanoicomputercdn.com/media/product/37306_vgms292_1.jpg"
+            }
+            ]
+}

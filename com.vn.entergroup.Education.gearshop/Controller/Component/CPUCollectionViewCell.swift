@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Nuke
 
 class CPUCollectionViewCell: UICollectionViewCell {
 
@@ -20,8 +21,10 @@ class CPUCollectionViewCell: UICollectionViewCell {
     }
 
     func setdata(data: CPUModel) {
-        mLabelCPU.text = data.title
+        mLabelCPU.text = data.name
         mLabelPrice.text = data.price
-        mImgCPU.image = UIImage(named: data.img)
+        mImgCPU.image = UIImage(named: data.url_image)
+        let request = ImageRequest(urlRequest: URLRequest(url: URL(string: data.url_image)!))
+        Nuke.loadImage(with: request, into: mImgCPU)
     }
 }

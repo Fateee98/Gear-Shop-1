@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Nuke
 
 class CategoryProductViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -43,12 +44,12 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
     }
     
     func loadDataLocal() {
-        if let path = Bundle.main.path(forResource: "cpu", ofType: "json")
+        if let path = Bundle.main.path(forResource: "document", ofType: "json")
         {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-                if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let listData = jsonResult["data"] as? [Any] {
+                if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let listData = jsonResult["Cpu"] as? [Any] {
                     for item in listData {
                         let i = CPUModel(data: item as! [String : AnyObject])
                         arrData.append(i)
@@ -82,30 +83,55 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell : UICollectionViewCell?
-        
+    
         switch mScreenType {
         case screenType.cpu:
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CPUCollectionViewCell", for: indexPath) as! CPUCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CPUCollectionViewCell", for: indexPath) as! CPUCollectionViewCell
             cell.setdata(data: arrData[indexPath.row])
+            return cell
             break
         case screenType.vga:
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VGACollectionViewCell", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VGACollectionViewCell", for: indexPath)
+            return cell
             break
         case screenType.ram:
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VGACollectionViewCell", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VGACollectionViewCell", for: indexPath)
+            return cell
             break
         case screenType.mobo:
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VGACollectionViewCell", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VGACollectionViewCell", for: indexPath)
+            return cell
             break
             
         default:
-            cell = UICollectionViewCell()
+            let cell = UICollectionViewCell()
             break
             
         }
+        let cell : UICollectionViewCell?
         return cell!
     }
     
     
+}
+//Extension convert url to image
+extension UIImageView {
+    
+    func downloadImage(from url: String){
+        
+        let urlRequest = URLRequest(url: URL(string: url)!)
+        
+        let task = URLSession.shared.dataTask(with: urlRequest) { (data,response,error) in
+            
+            if error != nil {
+                print(error!)
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.image = UIImage(data: data!)
+            }
+        }
+        task.resume()
+    }
 }
