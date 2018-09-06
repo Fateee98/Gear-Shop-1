@@ -7,4 +7,6 @@ target 'com.vn.entergroup.Education.gearshop' do
 
   # Pods for com.vn.entergroup.Education.gearshop
 pod 'Nuke'
+pod 'Firebase/Core'
+pod 'Firebase/Database'
 end

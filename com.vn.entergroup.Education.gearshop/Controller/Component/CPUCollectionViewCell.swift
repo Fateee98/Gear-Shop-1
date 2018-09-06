@@ -20,7 +20,7 @@ class CPUCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
-    func setdata(data: CPUModel) {
+    func setdataCPU(data: CPUModel) {
         mLabelCPU.text = data.name
         mLabelPrice.text = data.price
         mImgCPU.image = UIImage(named: data.url_image)

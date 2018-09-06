@@ -64,10 +64,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "CategoryProductViewController") as! CategoryProductViewController
         vc.mScreenType = screenType(rawValue: indexPath!.row)!
-            
-//        self.present(sb1, animated: true, completion: nil)
         self.navigationController?.pushViewController(vc, animated: true)
-        
         
     }
     
