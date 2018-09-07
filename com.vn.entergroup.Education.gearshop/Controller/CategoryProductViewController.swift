@@ -14,6 +14,7 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
     @IBOutlet weak var mCollectionView: UICollectionView!
     var mScreenType = screenType.cpu
     
+    //Array of Product Model
     var mCPUModel = [CPUModel]()
     var mMainModel = [MoboModel]()
     var mRamModel = [RamModel]()
@@ -23,31 +24,34 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
     var handle:DatabaseHandle?
     var productData = [String]()
     
+    //API to get product data
+    let getProduct = API()
+    
     @IBOutlet weak var testText: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        handleCPUData(type: "Cpu") { (arrCPU) in
+        //get data for each product
+        getProduct.handleCPUData(type: "Cpu") { (arrCPU) in
             self.mCPUModel = arrCPU
             self.mCollectionView.reloadData()
         }
         
-        handleMoboData(type: "Main") { (arrMobo) in
+        getProduct.handleVGAData(type: "Vga") { (arrVga) in
+            self.mVGAModel = arrVga
+            self.mCollectionView.reloadData()
+        }
+        
+        getProduct.handleMoboData(type: "Main") { (arrMobo) in
             self.mMainModel = arrMobo
             self.mCollectionView.reloadData()
         }
         
-        handleVGAData(type: "Vga") { (arrVGA) in
-            self.mVGAModel = arrVGA
-            self.mCollectionView.reloadData()
-        }
-        
-        handleRamData(type: "Ram") { (arrRam) in
+        getProduct.handleRamData(type: "Ram") { (arrRam) in
             self.mRamModel = arrRam
             self.mCollectionView.reloadData()
         }
-        
-        
+    
         mCollectionView.register(UINib(nibName: "CPUCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CPUCollectionViewCell")
         mCollectionView.register(UINib(nibName: "VGACollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "VGACollectionViewCell")
         mCollectionView.register(UINib(nibName: "RamCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "RamCollectionViewCell")
@@ -55,77 +59,7 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
         
         //Set the firebase reference
         ref = Database.database().reference()
-        
-        //Retrieve product from database
-        
-        
     }
-    
-    func handleCPUData(type: String,completion: @escaping ([CPUModel]) -> Void)
-    {
-        let messageDB = Database.database().reference().child(type)
-        messageDB.observeSingleEvent(of: .value) { (snapshot) in
-            if let snapshotValue = snapshot.value as? [[String: AnyObject]]{
-                var arrCPU = [CPUModel]()
-                 for item in snapshotValue
-                 {
-                    let cpuData = CPUModel(data: item as! [String:AnyObject])
-                    arrCPU.append(cpuData)
-                    completion(arrCPU)
-                }
-            }
-        }
-    }
-    
-    func handleVGAData(type: String,completion: @escaping ([VGAModel]) -> Void)
-    {
-        let messageDB = Database.database().reference().child(type)
-        messageDB.observeSingleEvent(of: .value) { (snapshot) in
-            if let snapshotValue = snapshot.value as? [[String: AnyObject]]{
-                var arrVGA = [VGAModel]()
-                for item in snapshotValue
-                {
-                    let vgaData = VGAModel(data: item as! [String:AnyObject])
-                    arrVGA.append(vgaData)
-                    completion(arrVGA)
-                }
-            }
-        }
-    }
-    
-    func handleMoboData(type: String,completion: @escaping ([MoboModel]) -> Void)
-    {
-        let messageDB = Database.database().reference().child(type)
-        messageDB.observeSingleEvent(of: .value) { (snapshot) in
-            if let snapshotValue = snapshot.value as? [[String: AnyObject]]{
-                var arrMobo = [MoboModel]()
-                for item in snapshotValue
-                {
-                    let moboData = MoboModel(data: item as! [String:AnyObject])
-                    arrMobo.append(moboData)
-                    completion(arrMobo)
-                }
-            }
-        }
-    }
-    
-    func handleRamData(type: String,completion: @escaping ([RamModel]) -> Void)
-    {
-        let messageDB = Database.database().reference().child(type)
-        messageDB.observeSingleEvent(of: .value) { (snapshot) in
-            if let snapshotValue = snapshot.value as? [[String: AnyObject]]{
-                var arrRam = [RamModel]()
-                for item in snapshotValue
-                {
-                    let ramData = RamModel(data: item as! [String:AnyObject])
-                    arrRam.append(ramData)
-                    completion(arrRam)
-                }
-            }
-        }
-    }
-
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch mScreenType {
         case screenType.cpu:
@@ -139,19 +73,15 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
             
         default:
             return 0
-            
         }
         return 0
     }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DetailProductViewController") as! DetailProductViewController
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
-    
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
         switch mScreenType {
@@ -175,11 +105,8 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
         default:
             let cell = UICollectionViewCell()
             break
-            
         }
         let cell : UICollectionViewCell?
         return cell!
     }
-    
-    
 }
