@@ -14,10 +14,10 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
     @IBOutlet weak var mCollectionView: UICollectionView!
     var mScreenType = screenType.cpu
     
-    var arrCPU: [CPUModel] = []
-    var arrVGA: [VGAModel] = []
-    var arrRam: [RamModel] = []
-    var arrMobo: [MoboModel] = []
+    var mCPUModel = [CPUModel]()
+    var mMainModel = [MoboModel]()
+    var mRamModel = [RamModel]()
+    var mVGAModel = [VGAModel]()
     
     var ref:DatabaseReference?
     var handle:DatabaseHandle?
@@ -26,11 +26,28 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
     @IBOutlet weak var testText: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        loadDataCPU()
-//        loadDataVGA()
-//        loadDataRam()
-//        loadDataMobo()
-        handleData()
+        
+        handleCPUData(type: "Cpu") { (arrCPU) in
+            self.mCPUModel = arrCPU
+            self.mCollectionView.reloadData()
+        }
+        
+        handleMoboData(type: "Main") { (arrMobo) in
+            self.mMainModel = arrMobo
+            self.mCollectionView.reloadData()
+        }
+        
+        handleVGAData(type: "Vga") { (arrVGA) in
+            self.mVGAModel = arrVGA
+            self.mCollectionView.reloadData()
+        }
+        
+        handleRamData(type: "Ram") { (arrRam) in
+            self.mRamModel = arrRam
+            self.mCollectionView.reloadData()
+        }
+        
+        
         mCollectionView.register(UINib(nibName: "CPUCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CPUCollectionViewCell")
         mCollectionView.register(UINib(nibName: "VGACollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "VGACollectionViewCell")
         mCollectionView.register(UINib(nibName: "RamCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "RamCollectionViewCell")
@@ -44,90 +61,66 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
         
     }
     
-    func handleData()
+    func handleCPUData(type: String,completion: @escaping ([CPUModel]) -> Void)
     {
-        let messageDB = Database.database().reference().child("Cpu")
-        
-        messageDB.observe(.childAdded, with: { snapshot in
-            
-            let snapshotValue = snapshot.value as! NSDictionary
-            let name = snapshotValue["name"] as! String
-            let price = snapshotValue["price"] as! String
-        })
-    }
-    
-    func loadDataCPU() {
-        if let path = Bundle.main.path(forResource: "document", ofType: "json")
-        {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-                if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let listData = jsonResult["Cpu"] as? [Any] {
-                    for item in listData {
-                        let i = CPUModel(data: item as! [String : AnyObject])
-                        arrCPU.append(i)
-                    }
-                    mCollectionView.reloadData()
+        let messageDB = Database.database().reference().child(type)
+        messageDB.observeSingleEvent(of: .value) { (snapshot) in
+            if let snapshotValue = snapshot.value as? [[String: AnyObject]]{
+                var arrCPU = [CPUModel]()
+                 for item in snapshotValue
+                 {
+                    let cpuData = CPUModel(data: item as! [String:AnyObject])
+                    arrCPU.append(cpuData)
+                    completion(arrCPU)
                 }
-            } catch {
-                // handle error
             }
         }
     }
     
-    func loadDataVGA() {
-        if let path = Bundle.main.path(forResource: "document", ofType: "json")
-        {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-                if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let listData = jsonResult["VGA"] as? [Any] {
-                    for item in listData {
-                        let i = VGAModel(data: item as! [String : AnyObject])
-                        arrVGA.append(i)
-                    }
-                    mCollectionView.reloadData()
+    func handleVGAData(type: String,completion: @escaping ([VGAModel]) -> Void)
+    {
+        let messageDB = Database.database().reference().child(type)
+        messageDB.observeSingleEvent(of: .value) { (snapshot) in
+            if let snapshotValue = snapshot.value as? [[String: AnyObject]]{
+                var arrVGA = [VGAModel]()
+                for item in snapshotValue
+                {
+                    let vgaData = VGAModel(data: item as! [String:AnyObject])
+                    arrVGA.append(vgaData)
+                    completion(arrVGA)
                 }
-            } catch {
-                // handle error
             }
         }
     }
     
-    func loadDataRam() {
-        if let path = Bundle.main.path(forResource: "document", ofType: "json")
-        {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-                if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let listData = jsonResult["Ram"] as? [Any] {
-                    for item in listData {
-                        let i = RamModel(data: item as! [String : AnyObject])
-                        arrRam.append(i)
-                    }
-                    mCollectionView.reloadData()
+    func handleMoboData(type: String,completion: @escaping ([MoboModel]) -> Void)
+    {
+        let messageDB = Database.database().reference().child(type)
+        messageDB.observeSingleEvent(of: .value) { (snapshot) in
+            if let snapshotValue = snapshot.value as? [[String: AnyObject]]{
+                var arrMobo = [MoboModel]()
+                for item in snapshotValue
+                {
+                    let moboData = MoboModel(data: item as! [String:AnyObject])
+                    arrMobo.append(moboData)
+                    completion(arrMobo)
                 }
-            } catch {
-                // handle error
             }
         }
     }
     
-    func loadDataMobo() {
-        if let path = Bundle.main.path(forResource: "document", ofType: "json")
-        {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-                if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let listData = jsonResult["Main"] as? [Any] {
-                    for item in listData {
-                        let i = MoboModel(data: item as! [String : AnyObject])
-                        arrMobo.append(i)
-                    }
-                    mCollectionView.reloadData()
+    func handleRamData(type: String,completion: @escaping ([RamModel]) -> Void)
+    {
+        let messageDB = Database.database().reference().child(type)
+        messageDB.observeSingleEvent(of: .value) { (snapshot) in
+            if let snapshotValue = snapshot.value as? [[String: AnyObject]]{
+                var arrRam = [RamModel]()
+                for item in snapshotValue
+                {
+                    let ramData = RamModel(data: item as! [String:AnyObject])
+                    arrRam.append(ramData)
+                    completion(arrRam)
                 }
-            } catch {
-                // handle error
             }
         }
     }
@@ -136,13 +129,13 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch mScreenType {
         case screenType.cpu:
-            return arrCPU.count
+            return mCPUModel.count
         case screenType.vga:
-            return arrVGA.count
+            return mVGAModel.count
         case screenType.ram:
-            return arrRam.count
+            return mRamModel.count
         case screenType.mobo:
-            return arrMobo.count
+            return mMainModel.count
             
         default:
             return 0
@@ -163,21 +156,20 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
     
         switch mScreenType {
         case screenType.cpu:
-            handleData()
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CPUCollectionViewCell", for: indexPath) as! CPUCollectionViewCell
-//            cell.setdataCPU(data: arrCPU[indexPath.row])
+            cell.setdataCPU(data: mCPUModel[indexPath.row])
             return cell
         case screenType.vga:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VGACollectionViewCell", for: indexPath) as! VGACollectionViewCell
-            cell.setdataVGA(data: arrVGA[indexPath.row])
+            cell.setdataVGA(data: mVGAModel[indexPath.row])
             return cell
         case screenType.ram:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RamCollectionViewCell", for: indexPath) as! RamCollectionViewCell
-            cell.setdataRam(data: arrRam[indexPath.row])
+            cell.setdataRam(data: mRamModel[indexPath.row])
             return cell
         case screenType.mobo:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MoboCollectionViewCell", for: indexPath) as! MoboCollectionViewCell
-            cell.setdataMobo(data: arrMobo[indexPath.row])
+            cell.setdataMobo(data: mMainModel[indexPath.row])
             return cell
             
         default:

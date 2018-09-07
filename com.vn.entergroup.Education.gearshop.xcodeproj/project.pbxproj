@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C30E6FA22142304A00351DD5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30E6FA12142304A00351DD5 /* API.swift */; };
 		C3574EDE213E34BE0089327C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3574EDD213E34BE0089327C /* AppDelegate.swift */; };
 		C3574EE3213E34BE0089327C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3574EE1213E34BE0089327C /* Main.storyboard */; };
 		C3574EE5213E34D10089327C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3574EE4213E34D10089327C /* Assets.xcassets */; };
@@ -36,7 +37,6 @@
 		C36DC4F22140E20200687D28 /* MoboModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DC4F12140E20200687D28 /* MoboModel.swift */; };
 		C36DC4F42141123400687D28 /* DetailProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DC4F32141123400687D28 /* DetailProductViewController.swift */; };
 		C36DC4F621411D5600687D28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C36DC4F521411D5500687D28 /* GoogleService-Info.plist */; };
-		C36DC4F82141347600687D28 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DC4F72141347600687D28 /* ProductModel.swift */; };
 		C3F1BFB0213EDB9900A44814 /* CPUModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F1BFAF213EDB9900A44814 /* CPUModel.swift */; };
 		D535A0F59C9EFBFE8CF52642 /* Pods_com_vn_entergroup_Education_gearshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3324D4482762210D3E8EBB /* Pods_com_vn_entergroup_Education_gearshop.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +45,7 @@
 		030E84F8E728C59EE3036F6E /* Pods-com.vn.entergroup.Education.gearshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.vn.entergroup.Education.gearshop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-com.vn.entergroup.Education.gearshop/Pods-com.vn.entergroup.Education.gearshop.debug.xcconfig"; sourceTree = "<group>"; };
 		0E3324D4482762210D3E8EBB /* Pods_com_vn_entergroup_Education_gearshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_com_vn_entergroup_Education_gearshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD609D40F75326A31BE2B42 /* Pods-com.vn.entergroup.Education.gearshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.vn.entergroup.Education.gearshop.release.xcconfig"; path = "Pods/Target Support Files/Pods-com.vn.entergroup.Education.gearshop/Pods-com.vn.entergroup.Education.gearshop.release.xcconfig"; sourceTree = "<group>"; };
+		C30E6FA12142304A00351DD5 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C3574EDA213E34BE0089327C /* com.vn.entergroup.Education.gearshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = com.vn.entergroup.Education.gearshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3574EDD213E34BE0089327C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3574EE2213E34BE0089327C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		C36DC4F12140E20200687D28 /* MoboModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoboModel.swift; sourceTree = "<group>"; };
 		C36DC4F32141123400687D28 /* DetailProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductViewController.swift; sourceTree = "<group>"; };
 		C36DC4F521411D5500687D28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C36DC4F72141347600687D28 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		C3F1BFAF213EDB9900A44814 /* CPUModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,7 +135,6 @@
 				C36DC4E52140DA4C00687D28 /* VGAModel.swift */,
 				C36DC4EB2140DE2E00687D28 /* RamModel.swift */,
 				C36DC4F12140E20200687D28 /* MoboModel.swift */,
-				C36DC4F72141347600687D28 /* ProductModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,6 +155,7 @@
 				C3574EFB213E3D020089327C /* HomeViewController.swift */,
 				C3574F06213E7FC60089327C /* CategoryProductViewController.swift */,
 				C36DC4F32141123400687D28 /* DetailProductViewController.swift */,
+				C30E6FA12142304A00351DD5 /* API.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -346,12 +346,12 @@
 				C3574F0C213E9A700089327C /* CPUCollectionViewCell.swift in Sources */,
 				C3574F10213E9A8A0089327C /* VGACollectionViewCell.swift in Sources */,
 				C36DC4EC2140DE2E00687D28 /* RamModel.swift in Sources */,
+				C30E6FA22142304A00351DD5 /* API.swift in Sources */,
 				C3574F05213E78780089327C /* CategoryModel.swift in Sources */,
 				C3574F09213E982D0089327C /* Constant.swift in Sources */,
 				C3574EDE213E34BE0089327C /* AppDelegate.swift in Sources */,
 				C36DC4E62140DA4C00687D28 /* VGAModel.swift in Sources */,
 				C3574EFC213E3D020089327C /* HomeViewController.swift in Sources */,
-				C36DC4F82141347600687D28 /* ProductModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
