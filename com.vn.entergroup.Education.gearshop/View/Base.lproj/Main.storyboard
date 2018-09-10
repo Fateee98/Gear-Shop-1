@@ -42,7 +42,7 @@
             </objects>
             <point key="canvasLocation" x="431" y="291"/>
         </scene>
-        <!--Danh mục sản phẩm-->
+        <!--Gear Shop-->
         <scene sceneID="A3f-rO-9IT">
             <objects>
                 <viewController id="qRb-GA-rzt" customClass="HomeViewController" customModule="com_vn_entergroup_Education_gearshop" customModuleProvider="target" sceneMemberID="viewController">
@@ -64,7 +64,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EI9-cc-4mQ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Danh mục sản phẩm" id="SSv-xD-oF6"/>
+                    <navigationItem key="navigationItem" title="Gear Shop" id="SSv-xD-oF6"/>
                     <connections>
                         <outlet property="mGearItemTableView" destination="pGW-w2-NXq" id="bV6-Mm-j9e"/>
                     </connections>
@@ -82,9 +82,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LBh-mf-nde">
-                                <rect key="frame" x="10" y="74" width="355" height="684"/>
+                                <rect key="frame" x="0.0" y="74" width="375" height="684"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bje-JK-4Og">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="bje-JK-4Og">
                                     <size key="itemSize" width="185" height="172"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -92,7 +92,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TdM-Wv-tPD">
-                                        <rect key="frame" x="85" y="0.0" width="185" height="172"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="185" height="172"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="185" height="172"/>
@@ -108,10 +108,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DHT-6s-c2l" firstAttribute="trailing" secondItem="LBh-mf-nde" secondAttribute="trailing" constant="10" id="RCc-BO-FXT"/>
+                            <constraint firstItem="DHT-6s-c2l" firstAttribute="trailing" secondItem="LBh-mf-nde" secondAttribute="trailing" id="RCc-BO-FXT"/>
                             <constraint firstItem="DHT-6s-c2l" firstAttribute="bottom" secondItem="LBh-mf-nde" secondAttribute="bottom" constant="20" id="eeF-Vl-ZAz"/>
                             <constraint firstItem="LBh-mf-nde" firstAttribute="top" secondItem="DHT-6s-c2l" secondAttribute="top" constant="30" id="pLT-gS-Xwe"/>
-                            <constraint firstItem="LBh-mf-nde" firstAttribute="leading" secondItem="DHT-6s-c2l" secondAttribute="leading" constant="10" id="t5W-36-9Cy"/>
+                            <constraint firstItem="LBh-mf-nde" firstAttribute="leading" secondItem="DHT-6s-c2l" secondAttribute="leading" id="t5W-36-9Cy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DHT-6s-c2l"/>
                     </view>

@@ -10,7 +10,7 @@ import UIKit
 import Nuke
 
 class CPUCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var mLabelCPU: UILabel!
     @IBOutlet weak var mLabelPrice: UILabel!
     @IBOutlet weak var mImgCPU: UIImageView!
