@@ -109,9 +109,9 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.row == 0
         {
-            return CGSize(width: screenWidth/2, height: screenWidth/2)
+            return CGSize(width: screenWidth/2, height: screenWidth/1.5)
         }
-        return CGSize(width: screenWidth/2, height: screenWidth/2)
+        return CGSize(width: screenWidth/2, height: screenWidth/1.5)
     }
     
     @objc private func updateData()
@@ -124,6 +124,7 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DetailProductViewController") as! DetailProductViewController
+        vc.
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -134,33 +135,25 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CPUCollectionViewCell", for: indexPath) as! CPUCollectionViewCell
             cell.setdataCPU(data: mCPUModel[indexPath.row])
             cell.layer.borderColor = UIColor.gray.cgColor
-            cell.layer.borderWidth = 0.2
-            cell.frame.size.width = screenWidth / 2
-            cell.frame.size.height = screenWidth / 2
+            cell.layer.borderWidth = 0.1
             return cell
         case screenType.vga:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VGACollectionViewCell", for: indexPath) as! VGACollectionViewCell
             cell.setdataVGA(data: mVGAModel[indexPath.row])
             cell.layer.borderColor = UIColor.gray.cgColor
-            cell.layer.borderWidth = 0.2
-            cell.frame.size.width = screenWidth / 2
-            cell.frame.size.height = screenWidth / 2
+            cell.layer.borderWidth = 0.1
             return cell
         case screenType.ram:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RamCollectionViewCell", for: indexPath) as! RamCollectionViewCell
             cell.setdataRam(data: mRamModel[indexPath.row])
             cell.layer.borderColor = UIColor.gray.cgColor
-            cell.layer.borderWidth = 0.2
-            cell.frame.size.width = screenWidth / 2
-            cell.frame.size.height = screenWidth / 2
+            cell.layer.borderWidth = 0.1
             return cell
         case screenType.mobo:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MoboCollectionViewCell", for: indexPath) as! MoboCollectionViewCell
             cell.setdataMobo(data: mMainModel[indexPath.row])
             cell.layer.borderColor = UIColor.gray.cgColor
-            cell.layer.borderWidth = 0.2
-            cell.frame.size.width = screenWidth / 2
-            cell.frame.size.height = screenWidth / 2
+            cell.layer.borderWidth = 0.1
             return cell
             
         default:

@@ -16,7 +16,8 @@ class DetailProductViewController: UIViewController {
     
     @IBOutlet weak var mProductPrice: UILabel!
     
-    
+    var imagess = UIImage()
+    var nameprod = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
