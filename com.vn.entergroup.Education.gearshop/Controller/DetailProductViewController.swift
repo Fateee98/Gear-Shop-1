@@ -17,10 +17,14 @@ class DetailProductViewController: UIViewController {
     @IBOutlet weak var mProductPrice: UILabel!
     
     var imagess = UIImage()
+    var price = ""
     var nameprod = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mNameProduct.text = nameprod
+        mImgDetailProduct.image = imagess
+        mProductPrice.text = price
 
         // Do any additional setup after loading the view.
     }
