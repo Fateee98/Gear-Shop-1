@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FF485828576B68CFB836658 /* Pods_com_vn_entergroup_Education_gearshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4B571416D4FBDBA98D28C8 /* Pods_com_vn_entergroup_Education_gearshop.framework */; };
 		C30E6FA22142304A00351DD5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30E6FA12142304A00351DD5 /* API.swift */; };
 		C3574EDE213E34BE0089327C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3574EDD213E34BE0089327C /* AppDelegate.swift */; };
 		C3574EE3213E34BE0089327C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3574EE1213E34BE0089327C /* Main.storyboard */; };
@@ -27,7 +28,6 @@
 		C3574F0D213E9A710089327C /* CPUCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3574F0B213E9A700089327C /* CPUCollectionViewCell.xib */; };
 		C3574F10213E9A8A0089327C /* VGACollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3574F0E213E9A8A0089327C /* VGACollectionViewCell.swift */; };
 		C3574F11213E9A8A0089327C /* VGACollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3574F0F213E9A8A0089327C /* VGACollectionViewCell.xib */; };
-		C3664DFA213F906F00989F17 /* document.json in Resources */ = {isa = PBXBuildFile; fileRef = C3664DF9213F906F00989F17 /* document.json */; };
 		C36DC4E62140DA4C00687D28 /* VGAModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DC4E52140DA4C00687D28 /* VGAModel.swift */; };
 		C36DC4E92140DC5C00687D28 /* RamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DC4E72140DC5C00687D28 /* RamCollectionViewCell.swift */; };
 		C36DC4EA2140DC5C00687D28 /* RamCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36DC4E82140DC5C00687D28 /* RamCollectionViewCell.xib */; };
@@ -37,6 +37,12 @@
 		C36DC4F22140E20200687D28 /* MoboModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DC4F12140E20200687D28 /* MoboModel.swift */; };
 		C36DC4F42141123400687D28 /* DetailProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DC4F32141123400687D28 /* DetailProductViewController.swift */; };
 		C36DC4F621411D5600687D28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C36DC4F521411D5500687D28 /* GoogleService-Info.plist */; };
+		C3C0DA4A21477113007DE895 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C0DA4921477113007DE895 /* FBSDKCoreKit.framework */; };
+		C3C0DA4D21477341007DE895 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C0DA4C21477341007DE895 /* FBSDKCoreKit.framework */; };
+		C3C0DA4F21477366007DE895 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C0DA4E21477366007DE895 /* FBSDKLoginKit.framework */; };
+		C3C0DA5121477819007DE895 /* MoreSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C0DA5021477818007DE895 /* MoreSettingViewController.swift */; };
+		C3C0DA552147B31E007DE895 /* BaseModeVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C0DA542147B31D007DE895 /* BaseModeVO.swift */; };
+		C3C0DA572147B8CE007DE895 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C0DA562147B8CE007DE895 /* SearchViewController.swift */; };
 		C3F1BFB0213EDB9900A44814 /* CPUModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F1BFAF213EDB9900A44814 /* CPUModel.swift */; };
 		D535A0F59C9EFBFE8CF52642 /* Pods_com_vn_entergroup_Education_gearshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3324D4482762210D3E8EBB /* Pods_com_vn_entergroup_Education_gearshop.framework */; };
 /* End PBXBuildFile section */
@@ -67,7 +73,6 @@
 		C3574F0B213E9A700089327C /* CPUCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CPUCollectionViewCell.xib; sourceTree = "<group>"; };
 		C3574F0E213E9A8A0089327C /* VGACollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGACollectionViewCell.swift; sourceTree = "<group>"; };
 		C3574F0F213E9A8A0089327C /* VGACollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VGACollectionViewCell.xib; sourceTree = "<group>"; };
-		C3664DF9213F906F00989F17 /* document.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = document.json; sourceTree = "<group>"; };
 		C36DC4E52140DA4C00687D28 /* VGAModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGAModel.swift; sourceTree = "<group>"; };
 		C36DC4E72140DC5C00687D28 /* RamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamCollectionViewCell.swift; sourceTree = "<group>"; };
 		C36DC4E82140DC5C00687D28 /* RamCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RamCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -77,7 +82,15 @@
 		C36DC4F12140E20200687D28 /* MoboModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoboModel.swift; sourceTree = "<group>"; };
 		C36DC4F32141123400687D28 /* DetailProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductViewController.swift; sourceTree = "<group>"; };
 		C36DC4F521411D5500687D28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C3C0DA4821476CA4007DE895 /* com.vn.entergroup.Education.gearshop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = com.vn.entergroup.Education.gearshop.entitlements; sourceTree = "<group>"; };
+		C3C0DA4921477113007DE895 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3C0DA4C21477341007DE895 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		C3C0DA4E21477366007DE895 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		C3C0DA5021477818007DE895 /* MoreSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSettingViewController.swift; sourceTree = "<group>"; };
+		C3C0DA542147B31D007DE895 /* BaseModeVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModeVO.swift; sourceTree = "<group>"; };
+		C3C0DA562147B8CE007DE895 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../../../../../Downloads/SearchViewController.swift; sourceTree = "<group>"; };
 		C3F1BFAF213EDB9900A44814 /* CPUModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUModel.swift; sourceTree = "<group>"; };
+		FC4B571416D4FBDBA98D28C8 /* Pods_com_vn_entergroup_Education_gearshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_com_vn_entergroup_Education_gearshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +98,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3C0DA4A21477113007DE895 /* FBSDKCoreKit.framework in Frameworks */,
+				C3C0DA4D21477341007DE895 /* FBSDKCoreKit.framework in Frameworks */,
+				C3C0DA4F21477366007DE895 /* FBSDKLoginKit.framework in Frameworks */,
 				D535A0F59C9EFBFE8CF52642 /* Pods_com_vn_entergroup_Education_gearshop.framework in Frameworks */,
+				7FF485828576B68CFB836658 /* Pods_com_vn_entergroup_Education_gearshop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +112,7 @@
 		C3574ED1213E34BE0089327C = {
 			isa = PBXGroup;
 			children = (
+				C3C0DA4B21477332007DE895 /* Frameworks */,
 				C3574EDC213E34BE0089327C /* com.vn.entergroup.Education.gearshop */,
 				C3574EDB213E34BE0089327C /* Products */,
 				E20ACDFCECD323FB6A8BC258 /* Pods */,
@@ -113,6 +131,7 @@
 		C3574EDC213E34BE0089327C /* com.vn.entergroup.Education.gearshop */ = {
 			isa = PBXGroup;
 			children = (
+				C3C0DA4821476CA4007DE895 /* com.vn.entergroup.Education.gearshop.entitlements */,
 				C3574EF2213E372F0089327C /* Extensions */,
 				C3574EF1213E371F0089327C /* Controller */,
 				C3574EF0213E371A0089327C /* View */,
@@ -128,7 +147,7 @@
 		C3574EEF213E370F0089327C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C3664DF9213F906F00989F17 /* document.json */,
+				C3C0DA542147B31D007DE895 /* BaseModeVO.swift */,
 				C3574F02213E785B0089327C /* gearitem.json */,
 				C3574F04213E78780089327C /* CategoryModel.swift */,
 				C3F1BFAF213EDB9900A44814 /* CPUModel.swift */,
@@ -156,6 +175,8 @@
 				C3574F06213E7FC60089327C /* CategoryProductViewController.swift */,
 				C36DC4F32141123400687D28 /* DetailProductViewController.swift */,
 				C30E6FA12142304A00351DD5 /* API.swift */,
+				C3C0DA5021477818007DE895 /* MoreSettingViewController.swift */,
+				C3C0DA562147B8CE007DE895 /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,6 +210,16 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		C3C0DA4B21477332007DE895 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3C0DA4E21477366007DE895 /* FBSDKLoginKit.framework */,
+				C3C0DA4C21477341007DE895 /* FBSDKCoreKit.framework */,
+				FC4B571416D4FBDBA98D28C8 /* Pods_com_vn_entergroup_Education_gearshop.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		E20ACDFCECD323FB6A8BC258 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +232,7 @@
 		FEEBFC45F4E479A3A62FB1E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3C0DA4921477113007DE895 /* FBSDKCoreKit.framework */,
 				0E3324D4482762210D3E8EBB /* Pods_com_vn_entergroup_Education_gearshop.framework */,
 			);
 			name = Frameworks;
@@ -218,6 +250,7 @@
 				C3574ED7213E34BE0089327C /* Frameworks */,
 				C3574ED8213E34BE0089327C /* Resources */,
 				7D50D10C2D8F2D382AA83950 /* [CP] Embed Pods Frameworks */,
+				AFAD845B9802A662A4F1BBFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,6 +273,11 @@
 				TargetAttributes = {
 					C3574ED9213E34BE0089327C = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -270,7 +308,6 @@
 				C3574EE8213E34D10089327C /* LaunchScreen.storyboard in Resources */,
 				C3574F03213E785B0089327C /* gearitem.json in Resources */,
 				C3574EE5213E34D10089327C /* Assets.xcassets in Resources */,
-				C3664DFA213F906F00989F17 /* document.json in Resources */,
 				C36DC4F02140E0ED00687D28 /* MoboCollectionViewCell.xib in Resources */,
 				C3574EE3213E34BE0089327C /* Main.storyboard in Resources */,
 				C3574F01213E72E20089327C /* GearItemTableViewCell.xib in Resources */,
@@ -290,14 +327,24 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-com.vn.entergroup.Education.gearshop/Pods-com.vn.entergroup.Education.gearshop-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -325,6 +372,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AFAD845B9802A662A4F1BBFD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-com.vn.entergroup.Education.gearshop/Pods-com.vn.entergroup.Education.gearshop-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-com.vn.entergroup.Education.gearshop/Pods-com.vn.entergroup.Education.gearshop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -337,6 +404,7 @@
 				C3574F00213E72E20089327C /* GearItemTableViewCell.swift in Sources */,
 				C3574EF7213E3B960089327C /* exView.swift in Sources */,
 				C3574EFA213E3B960089327C /* exString.swift in Sources */,
+				C3C0DA5121477819007DE895 /* MoreSettingViewController.swift in Sources */,
 				C36DC4EF2140E0ED00687D28 /* MoboCollectionViewCell.swift in Sources */,
 				C3574F07213E7FC60089327C /* CategoryProductViewController.swift in Sources */,
 				C3574EF9213E3B960089327C /* exUITableHeaderView.swift in Sources */,
@@ -344,12 +412,14 @@
 				C3F1BFB0213EDB9900A44814 /* CPUModel.swift in Sources */,
 				C36DC4F42141123400687D28 /* DetailProductViewController.swift in Sources */,
 				C3574F0C213E9A700089327C /* CPUCollectionViewCell.swift in Sources */,
+				C3C0DA572147B8CE007DE895 /* SearchViewController.swift in Sources */,
 				C3574F10213E9A8A0089327C /* VGACollectionViewCell.swift in Sources */,
 				C36DC4EC2140DE2E00687D28 /* RamModel.swift in Sources */,
 				C30E6FA22142304A00351DD5 /* API.swift in Sources */,
 				C3574F05213E78780089327C /* CategoryModel.swift in Sources */,
 				C3574F09213E982D0089327C /* Constant.swift in Sources */,
 				C3574EDE213E34BE0089327C /* AppDelegate.swift in Sources */,
+				C3C0DA552147B31E007DE895 /* BaseModeVO.swift in Sources */,
 				C36DC4E62140DA4C00687D28 /* VGAModel.swift in Sources */,
 				C3574EFC213E3D020089327C /* HomeViewController.swift in Sources */,
 			);
@@ -496,8 +566,13 @@
 			baseConfigurationReference = 030E84F8E728C59EE3036F6E /* Pods-com.vn.entergroup.Education.gearshop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = com.vn.entergroup.Education.gearshop/com.vn.entergroup.Education.gearshop.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4MJKWK33YR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = com.vn.entergroup.Education.gearshop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -518,8 +593,29 @@
 			baseConfigurationReference = 9DD609D40F75326A31BE2B42 /* Pods-com.vn.entergroup.Education.gearshop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = com.vn.entergroup.Education.gearshop/com.vn.entergroup.Education.gearshop.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4MJKWK33YR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Bolts\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FBSDKCoreKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FBSDKLoginKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuth\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseDatabase\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Nuke\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/leveldb-library\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleAppMeasurement/Frameworks\"",
+					/Users/huyparody/Documents/FacebookSDKs,
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = com.vn.entergroup.Education.gearshop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

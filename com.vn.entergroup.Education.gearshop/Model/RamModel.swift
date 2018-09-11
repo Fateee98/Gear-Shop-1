@@ -7,25 +7,19 @@
 //
 
 import Foundation
-class RamModel
+class RamModel: BaseModeVO
 {
-    var id = ""
-    var name = ""
-    var price = ""
     var memory = ""
     var bus = ""
     var type = ""
     var detail = ""
-    var url_image = ""
     
-    init(data: [String: AnyObject]) {
-        id = data["id"] as? String ?? ""
-        name = data["name"] as? String ?? ""
-        price = data["price"] as? String ?? ""
+    override init(data: [String: AnyObject]) {
+        super.init(data: data)
+
         memory = data["memory"] as? String ?? ""
         bus = data["bus"] as? String ?? ""
         type = data["type"] as? String ?? ""
         detail = data["detail"] as? String ?? ""
-        url_image = data["url_image"] as? String ?? ""
     }
 }

@@ -9,4 +9,7 @@ target 'com.vn.entergroup.Education.gearshop' do
 pod 'Nuke'
 pod 'Firebase/Core'
 pod 'Firebase/Database'
+pod 'FirebaseUI/Auth'
+pod 'FirebaseUI/Facebook'
+pod 'JGProgressHUD'
 end

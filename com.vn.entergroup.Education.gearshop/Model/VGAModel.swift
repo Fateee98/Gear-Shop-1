@@ -7,27 +7,24 @@
 //
 
 import Foundation
-class VGAModel
+class VGAModel: BaseModeVO
 {
-    var id = ""
-    var name = ""
-    var price = ""
+//    var id = ""
+//    var name = ""
+//    var price = ""
     var bus_standard = ""
     var resolution = ""
     var video_memory = ""
     var recommend_psu = ""
     var detail = ""
-    var url_image = ""
+//    var url_image = ""
     
-    init(data: [String: AnyObject]) {
-        id = data["id"] as? String ?? ""
-        name = data["name"] as? String ?? ""
-        price = data["price"] as? String ?? ""
+    override init(data: [String: AnyObject]) {
+        super.init(data: data)
         bus_standard = data["bus_standard"] as? String ?? ""
         resolution = data["resolution"] as? String ?? ""
         video_memory = data["video_memory"] as? String ?? ""
         recommend_psu = data["recommend_psu"] as? String ?? ""
         detail = data["detail"] as? String ?? ""
-        url_image = data["url_image"] as? String ?? ""
     }
 }
