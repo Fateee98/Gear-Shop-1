@@ -117,10 +117,6 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        if indexPath.row == 0
-//        {
-//            return CGSize(width: screenWidth/2, height: screenHeight/3)
-//        }
         return CGSize(width: screenWidth/2, height: screenHeight/3)
     }
     
@@ -152,8 +148,8 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
             return
         }
         self.navigationController?.pushViewController(vc, animated: true)
-        
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
         switch mScreenType {

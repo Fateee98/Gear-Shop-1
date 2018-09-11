@@ -12,15 +12,22 @@ import JGProgressHUD
 
 class SearchViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UISearchBarDelegate, UICollectionViewDelegateFlowLayout{
     
-    
+    var mScreenType = screenType.cpu
     @IBOutlet weak var mSearchBar: UISearchBar!
     @IBOutlet weak var collectionSearchView: UICollectionView!
     //Array of product model
     var mInSearch = false
     var mBaseList = [BaseModeVO]()
     var mTempSearchList = [BaseModeVO]()
+    
+    var mCPUModelSearch = [CPUModel]()
+    var mMainModelSearch = [MoboModel]()
+    var mRamModelSearch = [RamModel]()
+    var mVGAModelSearch = [VGAModel]()
+    
     var ref:DatabaseReference?
     var handle:DatabaseHandle?
+    
     var screenSize: CGRect!
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
@@ -45,8 +52,6 @@ class SearchViewController: UIViewController,UICollectionViewDelegate,UICollecti
         }else{
             mInSearch = false
         }
-        
-        
         
         //        if mBuildingList!.list[index].name.uppercased().contains(keyword.uppercased()) {
         //            mTempList.append(mBuildingList!.list[index])
@@ -76,14 +81,37 @@ class SearchViewController: UIViewController,UICollectionViewDelegate,UICollecti
         refreshProduct()
         
         hideKeyboardWhenTappedAround()
-        
-        
+
         //Register xib
         collectionSearchView.register(UINib(nibName: "CPUCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CPUCollectionViewCell")
         collectionSearchView.register(UINib(nibName: "VGACollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "VGACollectionViewCell")
         collectionSearchView.register(UINib(nibName: "RamCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "RamCollectionViewCell")
         collectionSearchView.register(UINib(nibName: "MoboCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MoboCollectionViewCell")
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vcfull = storyboard.instantiateViewController(withIdentifier: "DetailProductViewController") as! DetailProductViewController
+        switch mScreenType
+        {
+        case screenType.cpu:
+            vcfull.mCpuProduct = mCPUModelSearch[indexPath.row]
+            break
+        case screenType.vga:
+            vcfull.mVGaProduct = mVGAModelSearch[indexPath.row]
+            break
+        case screenType.ram:
+            vcfull.mRamProduct = mRamModelSearch[indexPath.row]
+            break
+        case screenType.mobo:
+            vcfull.mMainProduct = mMainModelSearch[indexPath.row]
+            break
+        default:
+            return
+        }
+        self.navigationController?.pushViewController(vcfull, animated: true)
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         search(keyword: searchText)
     }
