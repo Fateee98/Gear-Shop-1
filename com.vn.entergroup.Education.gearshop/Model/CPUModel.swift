@@ -7,28 +7,22 @@
 //
 
 import Foundation
-class CPUModel {
-    var id = ""
-    var name = ""
-    var price = ""
+class CPUModel: BaseModeVO {
     var socket = ""
     var speed = ""
     var core = ""
     var thread = ""
     var bus_ram_support = ""
     var detail = ""
-    var url_image = ""
     
-    init(data: [String: AnyObject]) {
-        id = data["id"] as? String ?? ""
-        name = data["name"] as? String ?? ""
-        price = data["price"] as? String ?? ""
+    override init(data: [String: AnyObject]) {
+        super.init(data: data)
         socket = data["socket"] as? String ?? ""
         speed = data["speed"] as? String ?? ""
         core = data["core"] as? String ?? ""
         thread = data["thread"] as? String ?? ""
         bus_ram_support = data["bus_ram_support"] as? String ?? ""
         detail = data["detail"] as? String ?? ""
-        url_image = data["url_image"] as? String ?? ""
+
     }
 }

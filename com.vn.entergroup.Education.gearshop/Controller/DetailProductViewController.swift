@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Nuke
 class DetailProductViewController: UIViewController {
 
     @IBOutlet weak var mImgDetailProduct: UIImageView!
@@ -16,17 +16,40 @@ class DetailProductViewController: UIViewController {
     
     @IBOutlet weak var mProductPrice: UILabel!
     
-    var imagess = UIImage()
-    var price = ""
-    var nameprod = ""
+    var mCpuProduct : CPUModel?
+    var mVGaProduct : VGAModel?
+    var mRamProduct : RamModel?
+    var mMainProduct : MoboModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mNameProduct.text = nameprod
-        mImgDetailProduct.image = imagess
-        mProductPrice.text = price
+        if mCpuProduct != nil {
+            let request = ImageRequest(urlRequest: URLRequest(url: URL(string: (mCpuProduct?.url_image)!)!))
+            Nuke.loadImage(with: request, into: mImgDetailProduct)
+            mProductPrice.text = mCpuProduct?.price
+            mNameProduct.text = mCpuProduct?.name
+        }
 
-        // Do any additional setup after loading the view.
+        if mVGaProduct != nil {
+            let request = ImageRequest(urlRequest: URLRequest(url: URL(string: (mVGaProduct?.url_image)!)!))
+            Nuke.loadImage(with: request, into: mImgDetailProduct)
+            mProductPrice.text = mVGaProduct?.price
+            mNameProduct.text = mVGaProduct?.name
+        }
+        
+        if mRamProduct != nil {
+            let request = ImageRequest(urlRequest: URLRequest(url: URL(string: (mRamProduct?.url_image)!)!))
+            Nuke.loadImage(with: request, into: mImgDetailProduct)
+            mProductPrice.text = mRamProduct?.price
+            mNameProduct.text = mRamProduct?.name
+        }
+        
+        if mMainProduct != nil {
+            let request = ImageRequest(urlRequest: URLRequest(url: URL(string: (mMainProduct?.url_image)!)!))
+            Nuke.loadImage(with: request, into: mImgDetailProduct)
+            mProductPrice.text = mMainProduct?.price
+            mNameProduct.text = mMainProduct?.name
+        }
     }
 
 }
