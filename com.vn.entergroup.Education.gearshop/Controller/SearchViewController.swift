@@ -8,21 +8,31 @@
 
 import UIKit
 import FirebaseDatabase
+import JGProgressHUD
 
 class SearchViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UISearchBarDelegate, UICollectionViewDelegateFlowLayout{
     
-    
+    var mScreenType = screenType.cpu
     @IBOutlet weak var mSearchBar: UISearchBar!
     @IBOutlet weak var collectionSearchView: UICollectionView!
     //Array of product model
     var mInSearch = false
     var mBaseList = [BaseModeVO]()
     var mTempSearchList = [BaseModeVO]()
+    
+    var mCPUModelSearch = [CPUModel]()
+    var mMainModelSearch = [MoboModel]()
+    var mRamModelSearch = [RamModel]()
+    var mVGAModelSearch = [VGAModel]()
+    
     var ref:DatabaseReference?
     var handle:DatabaseHandle?
+    
     var screenSize: CGRect!
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
+    private let refreshControl = UIRefreshControl()
+    var hud = JGProgressHUD(style: .light)
     //API to get product data
     let getProduct = API()
     func search(keyword: String){
@@ -43,8 +53,6 @@ class SearchViewController: UIViewController,UICollectionViewDelegate,UICollecti
             mInSearch = false
         }
         
-        
-        
         //        if mBuildingList!.list[index].name.uppercased().contains(keyword.uppercased()) {
         //            mTempList.append(mBuildingList!.list[index])
     }
@@ -54,47 +62,104 @@ class SearchViewController: UIViewController,UICollectionViewDelegate,UICollecti
         screenSize = UIScreen.main.bounds
         screenWidth = screenSize.width
         screenHeight = screenSize.height
-        //Get product
-        getProduct.handleCPUData(type: "Cpu") { (arrCPU) in
-            for item in arrCPU {
-                self.mBaseList.append(item)
-            }
-            self.collectionSearchView.reloadData()
-        }
-        getProduct.handleVGAData(type: "Vga") { (arrVga) in
-            for item in arrVga {
-                self.mBaseList.append(item)
-            }
-            
-            self.collectionSearchView.reloadData()
-        }
-        getProduct.handleMoboData(type: "Main") { (arrMobo) in
-            for item in arrMobo {
-                self.mBaseList.append(item)
-            }
-            
-            self.collectionSearchView.reloadData()
+        
+        // Add Refresh Control to Table View
+        if #available(iOS 10.0, *) {
+            self.collectionSearchView.refreshControl = refreshControl
+        } else {
+            self.collectionSearchView.addSubview(refreshControl)
         }
         
-        getProduct.handleRamData(type: "Ram") { (arrRam) in
-            for item in arrRam {
-                self.mBaseList.append(item)
-            }
-            
-            self.collectionSearchView.reloadData()
-        }
+        self.refreshControl.tintColor = UIColor.lightGray
+        let attributes = [kCTForegroundColorAttributeName: UIColor.lightGray]
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Refreshing Data...", attributes: attributes as [NSAttributedStringKey : Any])
+        
+        self.refreshControl.addTarget(self, action: #selector(updateData), for: .valueChanged)
+        
+        hud.textLabel.text = "Đang tải dữ liệu..."
+        
+        refreshProduct()
         
         hideKeyboardWhenTappedAround()
-        
-        
+
         //Register xib
         collectionSearchView.register(UINib(nibName: "CPUCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CPUCollectionViewCell")
         collectionSearchView.register(UINib(nibName: "VGACollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "VGACollectionViewCell")
         collectionSearchView.register(UINib(nibName: "RamCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "RamCollectionViewCell")
         collectionSearchView.register(UINib(nibName: "MoboCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MoboCollectionViewCell")
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vcfull = storyboard.instantiateViewController(withIdentifier: "DetailProductViewController") as! DetailProductViewController
+        switch mScreenType
+        {
+        case screenType.cpu:
+            vcfull.mCpuProduct = mCPUModelSearch[indexPath.row]
+            break
+        case screenType.vga:
+            vcfull.mVGaProduct = mVGAModelSearch[indexPath.row]
+            break
+        case screenType.ram:
+            vcfull.mRamProduct = mRamModelSearch[indexPath.row]
+            break
+        case screenType.mobo:
+            vcfull.mMainProduct = mMainModelSearch[indexPath.row]
+            break
+        default:
+            return
+        }
+        self.navigationController?.pushViewController(vcfull, animated: true)
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         search(keyword: searchText)
+    }
+    
+    func refreshProduct()
+    {
+        //Get product
+        hud.show(in: self.view)
+        getProduct.handleCPUData(type: "Cpu") { (arrCPU) in
+            for item in arrCPU {
+                self.mBaseList.append(item)
+            }
+            self.collectionSearchView.reloadData()
+            self.hud.dismiss()
+        }
+        hud.show(in: self.view)
+        getProduct.handleVGAData(type: "Vga") { (arrVga) in
+            for item in arrVga {
+                self.mBaseList.append(item)
+            }
+            
+            self.collectionSearchView.reloadData()
+            self.hud.dismiss()
+        }
+        hud.show(in: self.view)
+        getProduct.handleMoboData(type: "Main") { (arrMobo) in
+            for item in arrMobo {
+                self.mBaseList.append(item)
+            }
+            
+            self.collectionSearchView.reloadData()
+            self.hud.dismiss()
+        }
+        hud.show(in: self.view)
+        getProduct.handleRamData(type: "Ram") { (arrRam) in
+            for item in arrRam {
+                self.mBaseList.append(item)
+            }
+            self.collectionSearchView.reloadData()
+            self.hud.dismiss()
+        }
+    }
+    
+    @objc private func updateData()
+    {
+        refreshProduct()
+        self.collectionSearchView.reloadData()
+        self.refreshControl.endRefreshing()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

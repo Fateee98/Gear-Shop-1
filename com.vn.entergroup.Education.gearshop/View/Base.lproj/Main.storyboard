@@ -152,7 +152,7 @@
                                     <outlet property="delegate" destination="8iX-uR-9y1" id="KHC-99-Rvp"/>
                                 </connections>
                             </collectionView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="IHH-9r-eCd">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Tìm kiếm sản phẩm" translatesAutoresizingMaskIntoConstraints="NO" id="IHH-9r-eCd">
                                 <rect key="frame" x="0.0" y="44" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
