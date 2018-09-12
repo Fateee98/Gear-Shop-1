@@ -69,7 +69,7 @@ class SearchViewController: UIViewController,UICollectionViewDelegate,UICollecti
         } else {
             self.collectionSearchView.addSubview(refreshControl)
         }
-        
+        removeBorderNavigation()
         self.refreshControl.tintColor = UIColor.lightGray
         let attributes = [kCTForegroundColorAttributeName: UIColor.lightGray]
         self.refreshControl.attributedTitle = NSAttributedString(string: "Refreshing Data...", attributes: attributes as [NSAttributedStringKey : Any])
@@ -95,21 +95,27 @@ class SearchViewController: UIViewController,UICollectionViewDelegate,UICollecti
         switch mScreenType
         {
         case screenType.cpu:
-            vcfull.mCpuProduct = mCPUModelSearch[indexPath.row]
+//            vcfull.mCpuProduct = mCPUModelSearch[indexPath.row]
+            vcfull.mAllProduct = mBaseList[indexPath.row]
             break
         case screenType.vga:
-            vcfull.mVGaProduct = mVGAModelSearch[indexPath.row]
+//            vcfull.mVGaProduct = mVGAModelSearch[indexPath.row]
+            vcfull.mAllProduct = mBaseList[indexPath.row]
             break
         case screenType.ram:
-            vcfull.mRamProduct = mRamModelSearch[indexPath.row]
+//            vcfull.mRamProduct = mRamModelSearch[indexPath.row]
+            vcfull.mAllProduct = mBaseList[indexPath.row]
             break
         case screenType.mobo:
-            vcfull.mMainProduct = mMainModelSearch[indexPath.row]
+//            vcfull.mMainProduct = mMainModelSearch[indexPath.row]
+            vcfull.mAllProduct = mBaseList[indexPath.row]
             break
         default:
             return
         }
+//        vcfull.mAllProduct = mBaseList[indexPath.row]
         self.navigationController?.pushViewController(vcfull, animated: true)
+        print(navigationController)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -153,6 +159,12 @@ class SearchViewController: UIViewController,UICollectionViewDelegate,UICollecti
             self.collectionSearchView.reloadData()
             self.hud.dismiss()
         }
+    }
+    
+    func removeBorderNavigation()
+    {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     @objc private func updateData()

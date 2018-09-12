@@ -10,17 +10,15 @@ import Foundation
 class MoboModel: BaseModeVO
 {
     var chipset_socket = ""
-    var CPU_support = ""
-    var RAM = ""
-    var Lan_Wireless = ""
+    var cpu_support = ""
+    var lan_wireless = ""
     var detail = ""
     
     override init(data: [String: AnyObject]) {
         super.init(data: data)
         chipset_socket = data["chipset_socket"] as? String ?? ""
-        CPU_support = data["CPU_support"] as? String ?? ""
-        RAM = data["RAM"] as? String ?? ""
-        Lan_Wireless = data["Lan_Wireless"] as? String ?? ""
+        cpu_support = data["cpu_support"] as? String ?? ""
+        lan_wireless = data["lan_wireless"] as? String ?? ""
         detail = data["detail"] as? String ?? ""
     }
 }

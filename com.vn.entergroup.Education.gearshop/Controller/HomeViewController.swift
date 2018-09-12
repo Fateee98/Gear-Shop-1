@@ -21,8 +21,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         mGearItemTableView.dataSource = self
         mGearItemTableView.tableFooterView = UIView()
         loadFakeData()
+        removeBorderNavigation()
+        self.mGearItemTableView.separatorStyle = .none
     }
 
+    func removeBorderNavigation()
+    {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    
     //Load fake data from json to tableview
     func loadFakeData() {
         if let path = Bundle.main.path(forResource: "gearitem", ofType: "json")

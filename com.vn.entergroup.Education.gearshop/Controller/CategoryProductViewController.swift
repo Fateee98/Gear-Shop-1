@@ -177,6 +177,7 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
             cell.layer.borderColor = UIColor.gray.cgColor
             cell.layer.borderWidth = 0.2
             return cell
+        
             
         default:
             let cell = UICollectionViewCell()
@@ -184,6 +185,11 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
         }
         let cell : UICollectionViewCell?
         return cell!
+    }
+    func removeBorderNavigation()
+    {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
 }
 extension UIViewController {
