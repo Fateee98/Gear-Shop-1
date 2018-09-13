@@ -12,4 +12,7 @@ pod 'Firebase/Database'
 pod 'FirebaseUI/Auth'
 pod 'FirebaseUI/Facebook'
 pod 'JGProgressHUD'
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
 end

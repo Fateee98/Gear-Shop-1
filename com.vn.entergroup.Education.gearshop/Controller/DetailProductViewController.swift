@@ -41,7 +41,6 @@ class DetailProductViewController: UIViewController {
     @IBOutlet weak var mDetailLabel6: UILabel!
     
     
-    @IBOutlet weak var mContraintsHeighScroll: NSLayoutConstraint!
     
     var mScreenType = screenType.cpu
     var mCpuProduct : CPUModel?
