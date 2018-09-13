@@ -41,6 +41,7 @@ class DetailProductViewController: UIViewController {
     @IBOutlet weak var mDetailLabel6: UILabel!
     
     
+    @IBOutlet weak var mContraintsHeighScroll: NSLayoutConstraint!
     
     var mScreenType = screenType.cpu
     var mCpuProduct : CPUModel?
@@ -49,6 +50,11 @@ class DetailProductViewController: UIViewController {
     var mMainProduct : MoboModel?
     var mAllProduct : BaseModeVO?
     
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        globalView.contentSize = CGSize(width: globalView.frame.width,
+//                                        height: globalView.frame.height * 1.59)
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
