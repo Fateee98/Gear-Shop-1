@@ -17,6 +17,7 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
     
+    //Khai bao refresh control
     private let refreshControl = UIRefreshControl()
     var mScreenType = screenType.cpu
     
@@ -26,10 +27,13 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
     var mRamModel = [RamModel]()
     var mVGAModel = [VGAModel]()
     
+    //Firebase handle
     var ref:DatabaseReference?
     var handle:DatabaseHandle?
     var productData = [String]()
     
+    
+    //Khai bao progress hud
     var hud = JGProgressHUD(style: .light)
     //API to get product data
     let getProduct = API()
@@ -38,6 +42,8 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        //Khao bao size man hinh
         screenSize = UIScreen.main.bounds
         screenWidth = screenSize.width
         screenHeight = screenSize.height
@@ -55,13 +61,14 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
         
         self.refreshControl.addTarget(self, action: #selector(updateData), for: .valueChanged)
         
-        //get data for each product
         
         hud.textLabel.text = "Đang tải dữ liệu..."
         
         refreshProduct()
         hideKeyboardWhenTappedAround()
         
+        
+        //Dang ky xib
         mCollectionView.register(UINib(nibName: "CPUCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CPUCollectionViewCell")
         mCollectionView.register(UINib(nibName: "VGACollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "VGACollectionViewCell")
         mCollectionView.register(UINib(nibName: "RamCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "RamCollectionViewCell")
@@ -71,6 +78,7 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
         ref = Database.database().reference()
     }
     
+    //Function load du lieu cac san pham
     func refreshProduct()
     {
         hud.show(in: self.view)
@@ -99,6 +107,7 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
         }
     }
     
+    //Return cac mang product
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch mScreenType {
         case screenType.cpu:
@@ -116,10 +125,12 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
         return 0
     }
     
+    //Set kich thuoc collection view cell
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: screenWidth/2, height: screenHeight/3)
     }
     
+    //Ham update du lieu cho pull to refresh
     @objc private func updateData()
     {
         refreshProduct()
@@ -127,6 +138,8 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
         self.refreshControl.endRefreshing()
     }
     
+    
+    //Chon vao san pham -> trang chi tiet san pham
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DetailProductViewController") as! DetailProductViewController
@@ -150,6 +163,7 @@ class CategoryProductViewController: UIViewController, UICollectionViewDelegate,
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    //Do du lieu vao cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
         switch mScreenType {

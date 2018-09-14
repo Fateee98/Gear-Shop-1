@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
+import FirebaseAuth
+import FirebaseUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,16 +20,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        //Config firebase
         FirebaseApp.configure()
+        
+        //config firebaseui
+        let authUI = FUIAuth.defaultAuthUI()
+        // You need to adopt a FUIAuthDelegate protocol to receive callback
+        authUI?.delegate = self as? FUIAuthDelegate
+        
+        //config fb firebase
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
 
     func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         
+        //Xu ly dang nhap FB
         let handled: Bool = FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
         // Add any custom logic here.
         return handled
+        
+        //Xu ly FirebaseUI
+        let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String?
+        if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
+            return true
+        }
+        // other URL handling goes here.
+        return false
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -46,6 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        //Dang ky event
         FBSDKAppEvents.activateApp()
     }
 
