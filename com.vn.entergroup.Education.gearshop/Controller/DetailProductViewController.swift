@@ -10,6 +10,8 @@ import UIKit
 import Nuke
 class DetailProductViewController: UIViewController {
 
+    
+    
     @IBOutlet weak var mImgDetailProduct: UIImageView!
     
     @IBOutlet weak var mNameProduct: UILabel!
@@ -41,6 +43,14 @@ class DetailProductViewController: UIViewController {
     @IBOutlet weak var mDetailLabel6: UILabel!
     
     
+    //An nut them gio hang thi hien thong bao da them thanh cong
+    @IBAction func onTouchedAddToCart(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Thêm thành công!", message: "Đã thêm sản phẩm vào giỏ hàng!", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
     
     var mScreenType = screenType.cpu
     var mCpuProduct : CPUModel?
@@ -70,7 +80,6 @@ class DetailProductViewController: UIViewController {
             mDetailLabel3.text = mCpuProduct?.detail
             mLabel4.text = "Socket: "
             mDetailLabel4.text = mCpuProduct?.socket
-            print(mCpuProduct?.socket)
             mLabel5.text = "Speed: "
             mDetailLabel5.text = mCpuProduct?.speed
             mLabel6.text = "Thread: "

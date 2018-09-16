@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7FF485828576B68CFB836658 /* Pods_com_vn_entergroup_Education_gearshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4B571416D4FBDBA98D28C8 /* Pods_com_vn_entergroup_Education_gearshop.framework */; };
 		C3034B71214803D3009EF423 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3034B70214803D3009EF423 /* SearchViewController.swift */; };
+		C30BD66B214E2A6A0018446C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30BD66A214E2A6A0018446C /* CartViewController.swift */; };
+		C30BD66E214E2F850018446C /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30BD66C214E2F850018446C /* CartTableViewCell.swift */; };
+		C30BD66F214E2F850018446C /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C30BD66D214E2F850018446C /* CartTableViewCell.xib */; };
 		C30E6FA22142304A00351DD5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30E6FA12142304A00351DD5 /* API.swift */; };
 		C3574EDE213E34BE0089327C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3574EDD213E34BE0089327C /* AppDelegate.swift */; };
 		C3574EE3213E34BE0089327C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3574EE1213E34BE0089327C /* Main.storyboard */; };
@@ -52,6 +55,9 @@
 		0E3324D4482762210D3E8EBB /* Pods_com_vn_entergroup_Education_gearshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_com_vn_entergroup_Education_gearshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD609D40F75326A31BE2B42 /* Pods-com.vn.entergroup.Education.gearshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.vn.entergroup.Education.gearshop.release.xcconfig"; path = "Pods/Target Support Files/Pods-com.vn.entergroup.Education.gearshop/Pods-com.vn.entergroup.Education.gearshop.release.xcconfig"; sourceTree = "<group>"; };
 		C3034B70214803D3009EF423 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C30BD66A214E2A6A0018446C /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		C30BD66C214E2F850018446C /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		C30BD66D214E2F850018446C /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		C30E6FA12142304A00351DD5 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C3574EDA213E34BE0089327C /* com.vn.entergroup.Education.gearshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = com.vn.entergroup.Education.gearshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3574EDD213E34BE0089327C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +183,7 @@
 				C30E6FA12142304A00351DD5 /* API.swift */,
 				C3C0DA5021477818007DE895 /* MoreSettingViewController.swift */,
 				C3034B70214803D3009EF423 /* SearchViewController.swift */,
+				C30BD66A214E2A6A0018446C /* CartViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -206,6 +213,8 @@
 				C36DC4E82140DC5C00687D28 /* RamCollectionViewCell.xib */,
 				C36DC4ED2140E0ED00687D28 /* MoboCollectionViewCell.swift */,
 				C36DC4EE2140E0ED00687D28 /* MoboCollectionViewCell.xib */,
+				C30BD66C214E2F850018446C /* CartTableViewCell.swift */,
+				C30BD66D214E2F850018446C /* CartTableViewCell.xib */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -311,6 +320,7 @@
 				C36DC4F02140E0ED00687D28 /* MoboCollectionViewCell.xib in Resources */,
 				C3574EE3213E34BE0089327C /* Main.storyboard in Resources */,
 				C3574F01213E72E20089327C /* GearItemTableViewCell.xib in Resources */,
+				C30BD66F214E2F850018446C /* CartTableViewCell.xib in Resources */,
 				C36DC4F621411D5600687D28 /* GoogleService-Info.plist in Resources */,
 				C36DC4EA2140DC5C00687D28 /* RamCollectionViewCell.xib in Resources */,
 				C3574F0D213E9A710089327C /* CPUCollectionViewCell.xib in Resources */,
@@ -443,6 +453,7 @@
 				C36DC4E92140DC5C00687D28 /* RamCollectionViewCell.swift in Sources */,
 				C3574F00213E72E20089327C /* GearItemTableViewCell.swift in Sources */,
 				C3574EF7213E3B960089327C /* exView.swift in Sources */,
+				C30BD66B214E2A6A0018446C /* CartViewController.swift in Sources */,
 				C3574EFA213E3B960089327C /* exString.swift in Sources */,
 				C3C0DA5121477819007DE895 /* MoreSettingViewController.swift in Sources */,
 				C36DC4EF2140E0ED00687D28 /* MoboCollectionViewCell.swift in Sources */,
@@ -455,6 +466,7 @@
 				C3574F10213E9A8A0089327C /* VGACollectionViewCell.swift in Sources */,
 				C36DC4EC2140DE2E00687D28 /* RamModel.swift in Sources */,
 				C30E6FA22142304A00351DD5 /* API.swift in Sources */,
+				C30BD66E214E2F850018446C /* CartTableViewCell.swift in Sources */,
 				C3574F05213E78780089327C /* CategoryModel.swift in Sources */,
 				C3034B71214803D3009EF423 /* SearchViewController.swift in Sources */,
 				C3574F09213E982D0089327C /* Constant.swift in Sources */,

@@ -88,62 +88,60 @@
             </objects>
             <point key="canvasLocation" x="-394.39999999999998" y="701.97044334975374"/>
         </scene>
-        <!--Tất cả sản phẩm-->
+        <!--Giỏ hàng của tôi-->
         <scene sceneID="KK3-B0-HSW">
             <objects>
-                <viewController id="3bh-kz-bRa" customClass="SearchViewController" customModule="com_vn_entergroup_Education_gearshop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3bh-kz-bRa" customClass="CartViewController" customModule="com_vn_entergroup_Education_gearshop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="01G-Jf-rU2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DhU-OO-snh">
-                                <rect key="frame" x="0.0" y="144" width="375" height="585"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng số sản phẩm: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sW6-89-vSo">
+                                <rect key="frame" x="10" y="108" width="149" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEf-iI-EJE">
+                                <rect key="frame" x="265" y="108" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.31253309960319653" green="0.68612254661523964" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="2Ek-0O-5oj"/>
+                                </constraints>
+                                <state key="normal" title="Thanh toán">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IVe-ld-dTO">
+                                <rect key="frame" x="0.0" y="149" width="375" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="IhP-ko-D9d">
-                                    <size key="itemSize" width="50" height="53"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Gc7-ai-A64">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="53"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="53"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="3bh-kz-bRa" id="zJe-ho-aiw"/>
-                                    <outlet property="delegate" destination="3bh-kz-bRa" id="cK1-WI-4P6"/>
+                                    <outlet property="dataSource" destination="3bh-kz-bRa" id="Qrr-Wo-UvD"/>
+                                    <outlet property="delegate" destination="3bh-kz-bRa" id="Wrd-SZ-5gE"/>
                                 </connections>
-                            </collectionView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Tìm kiếm sản phẩm" translatesAutoresizingMaskIntoConstraints="NO" id="Epm-oQ-Gwf">
-                                <rect key="frame" x="0.0" y="88" width="375" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="3bh-kz-bRa" id="Rm5-Zf-k5g"/>
-                                </connections>
-                            </searchBar>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Epm-oQ-Gwf" firstAttribute="top" secondItem="K4R-CC-hEv" secondAttribute="top" id="1vW-vH-pz0"/>
-                            <constraint firstItem="DhU-OO-snh" firstAttribute="leading" secondItem="Epm-oQ-Gwf" secondAttribute="leading" id="BGI-0o-H0j"/>
-                            <constraint firstItem="Epm-oQ-Gwf" firstAttribute="trailing" secondItem="K4R-CC-hEv" secondAttribute="trailing" id="Eph-HS-pE8"/>
-                            <constraint firstItem="DhU-OO-snh" firstAttribute="trailing" secondItem="Epm-oQ-Gwf" secondAttribute="trailing" id="PkL-Xg-m8Q"/>
-                            <constraint firstItem="Epm-oQ-Gwf" firstAttribute="leading" secondItem="K4R-CC-hEv" secondAttribute="leading" id="ok6-YR-9kx"/>
-                            <constraint firstItem="DhU-OO-snh" firstAttribute="bottom" secondItem="K4R-CC-hEv" secondAttribute="bottom" id="vy8-kY-yoB"/>
-                            <constraint firstItem="DhU-OO-snh" firstAttribute="top" secondItem="Epm-oQ-Gwf" secondAttribute="bottom" id="xqI-Qb-K7h"/>
+                            <constraint firstItem="IVe-ld-dTO" firstAttribute="leading" secondItem="K4R-CC-hEv" secondAttribute="leading" id="21K-hF-5fI"/>
+                            <constraint firstItem="sW6-89-vSo" firstAttribute="leading" secondItem="K4R-CC-hEv" secondAttribute="leading" constant="10" id="2se-Qe-esm"/>
+                            <constraint firstItem="K4R-CC-hEv" firstAttribute="trailing" secondItem="iEf-iI-EJE" secondAttribute="trailing" constant="10" id="8yZ-3S-TQg"/>
+                            <constraint firstItem="sW6-89-vSo" firstAttribute="top" secondItem="K4R-CC-hEv" secondAttribute="top" constant="20" id="PSx-R6-kmI"/>
+                            <constraint firstItem="K4R-CC-hEv" firstAttribute="bottom" secondItem="IVe-ld-dTO" secondAttribute="bottom" id="iX3-i7-jIj"/>
+                            <constraint firstItem="IVe-ld-dTO" firstAttribute="top" secondItem="sW6-89-vSo" secondAttribute="bottom" constant="20" id="jNC-Sg-81D"/>
+                            <constraint firstItem="K4R-CC-hEv" firstAttribute="trailing" secondItem="IVe-ld-dTO" secondAttribute="trailing" id="mAa-Tw-wcO"/>
+                            <constraint firstItem="iEf-iI-EJE" firstAttribute="top" secondItem="K4R-CC-hEv" secondAttribute="top" constant="20" id="ygp-lt-XxL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="K4R-CC-hEv"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Tất cả sản phẩm" id="Ngc-Zt-SUQ"/>
+                    <navigationItem key="navigationItem" title="Giỏ hàng của tôi" id="Ngc-Zt-SUQ"/>
                     <connections>
-                        <outlet property="collectionSearchView" destination="DhU-OO-snh" id="vhg-ae-8Pn"/>
-                        <outlet property="mSearchBar" destination="Epm-oQ-Gwf" id="ZTd-KQ-JvH"/>
+                        <outlet property="mCartTableView" destination="IVe-ld-dTO" id="QEK-WS-fLo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9I-oG-deE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -432,6 +430,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onTouchedAddToCart:" destination="GXh-Ni-TRz" eventType="touchUpInside" id="GAj-7J-CSf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -510,11 +511,11 @@
             </objects>
             <point key="canvasLocation" x="429.60000000000002" y="-374.66266866566718"/>
         </scene>
-        <!--Sản phẩm-->
+        <!--Giỏ hàng-->
         <scene sceneID="LzN-TR-qWd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l1y-VL-4h3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sản phẩm" image="shopping_cart" id="ETe-6c-xaP"/>
+                    <tabBarItem key="tabBarItem" title="Giỏ hàng" image="shopping_cart" id="ETe-6c-xaP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3m6-Vi-xoL">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
