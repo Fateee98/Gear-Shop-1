@@ -117,6 +117,7 @@ PODS:
   - FirebaseUI/Twitter (5.2.0):
     - FirebaseUI/Auth
     - TwitterKit (~> 3.0)
+  - GoogleAnalytics (3.17.0)
   - GoogleAppMeasurement (5.1.1):
     - GoogleUtilities/AppDelegateSwizzler (~> 5.2.0)
     - GoogleUtilities/MethodSwizzler (~> 5.2.0)
@@ -206,6 +207,7 @@ DEPENDENCIES:
   - FirebaseUI
   - FirebaseUI/Auth
   - FirebaseUI/Facebook
+  - GoogleAnalytics
   - JGProgressHUD
   - Nuke
 
@@ -229,6 +231,7 @@ SPEC REPOS:
     - FirebaseInstanceID
     - FirebaseStorage
     - FirebaseUI
+    - GoogleAnalytics
     - GoogleAppMeasurement
     - GoogleSignIn
     - GoogleToolboxForMac
@@ -267,6 +270,7 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: ea5af6920d0a4a29b40459d055bebe4a6c1333c4
   FirebaseStorage: 43f823b96b72a08539eba21a7de043348a69d4c6
   FirebaseUI: 9dfa423b6f1b73737ae8ab62692c1c0a8886186d
+  GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
   GoogleAppMeasurement: f7507b39b70ad0bd80b3d81518b2f43868974307
   GoogleSignIn: 591e46382014e591269f862ba6e7bc0fbd793532
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
@@ -286,6 +290,6 @@ SPEC CHECKSUMS:
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: bc7bd086b9b724a1d888745a054e1d0b1ecc4f3f
 
-PODFILE CHECKSUM: 09a4cb2d11e02bec4d171c57ed3473d37b24b34f
+PODFILE CHECKSUM: ba32908d0269df5b1bfffd70bac1750f331f42d5
 
 COCOAPODS: 1.5.3

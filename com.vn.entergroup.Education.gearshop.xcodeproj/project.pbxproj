@@ -13,6 +13,7 @@
 		C30BD66E214E2F850018446C /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30BD66C214E2F850018446C /* CartTableViewCell.swift */; };
 		C30BD66F214E2F850018446C /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C30BD66D214E2F850018446C /* CartTableViewCell.xib */; };
 		C30E6FA22142304A00351DD5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30E6FA12142304A00351DD5 /* API.swift */; };
+		C31AC1DF214F5A8000FA3A28 /* libdemo-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C31AC1DE214F5A7F00FA3A28 /* libdemo-library.a */; };
 		C3574EDE213E34BE0089327C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3574EDD213E34BE0089327C /* AppDelegate.swift */; };
 		C3574EE3213E34BE0089327C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3574EE1213E34BE0089327C /* Main.storyboard */; };
 		C3574EE5213E34D10089327C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3574EE4213E34D10089327C /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		C30BD66C214E2F850018446C /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		C30BD66D214E2F850018446C /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		C30E6FA12142304A00351DD5 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		C31AC1DE214F5A7F00FA3A28 /* libdemo-library.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libdemo-library.a"; path = "library/libdemo-library.a"; sourceTree = SOURCE_ROOT; };
 		C3574EDA213E34BE0089327C /* com.vn.entergroup.Education.gearshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = com.vn.entergroup.Education.gearshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3574EDD213E34BE0089327C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3574EE2213E34BE0089327C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C31AC1DF214F5A8000FA3A28 /* libdemo-library.a in Frameworks */,
 				C3C0DA4A21477113007DE895 /* FBSDKCoreKit.framework in Frameworks */,
 				C3C0DA4D21477341007DE895 /* FBSDKCoreKit.framework in Frameworks */,
 				C3C0DA4F21477366007DE895 /* FBSDKLoginKit.framework in Frameworks */,
@@ -222,6 +225,7 @@
 		C3C0DA4B21477332007DE895 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C31AC1DE214F5A7F00FA3A28 /* libdemo-library.a */,
 				C3C0DA4E21477366007DE895 /* FBSDKLoginKit.framework */,
 				C3C0DA4C21477341007DE895 /* FBSDKCoreKit.framework */,
 				FC4B571416D4FBDBA98D28C8 /* Pods_com_vn_entergroup_Education_gearshop.framework */,
@@ -631,6 +635,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/library",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vn.entergroup.gearshop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6a30d3c3-f64b-4e72-8a44-d1dee1a06894";
@@ -673,6 +681,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/library",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vn.entergroup.gearshop;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -17,4 +17,5 @@ pod 'JGProgressHUD'
 pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
+pod 'GoogleAnalytics'
 end

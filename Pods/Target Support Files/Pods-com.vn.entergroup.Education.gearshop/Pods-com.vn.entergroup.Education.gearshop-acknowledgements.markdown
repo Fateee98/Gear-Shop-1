@@ -2287,6 +2287,10 @@ Copyright 2018 Google
    limitations under the License.
 
 
+## GoogleAnalytics
+
+Copyright 2016 Google
+
 ## GoogleAppMeasurement
 
 Copyright 2018 Google
