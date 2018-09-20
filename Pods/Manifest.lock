@@ -190,6 +190,11 @@ PODS:
   - nanopb/encode (0.3.8)
   - Nuke (7.3.2)
   - Protobuf (3.6.1)
+  - Realm (3.7.6):
+    - Realm/Headers (= 3.7.6)
+  - Realm/Headers (3.7.6)
+  - RealmSwift (3.7.6):
+    - Realm (= 3.7.6)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
@@ -210,6 +215,7 @@ DEPENDENCIES:
   - GoogleAnalytics
   - JGProgressHUD
   - Nuke
+  - RealmSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -247,6 +253,8 @@ SPEC REPOS:
     - nanopb
     - Nuke
     - Protobuf
+    - Realm
+    - RealmSwift
     - SDWebImage
     - TwitterCore
     - TwitterKit
@@ -286,10 +294,12 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Nuke: a9a31bbd6c6723753ab024ef22057dcaaf046c1b
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+  Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
+  RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: bc7bd086b9b724a1d888745a054e1d0b1ecc4f3f
 
-PODFILE CHECKSUM: ba32908d0269df5b1bfffd70bac1750f331f42d5
+PODFILE CHECKSUM: a24f749c0e962fa833a12494fd7cb3344a5cd3ca
 
 COCOAPODS: 1.5.3

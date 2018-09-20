@@ -16,11 +16,6 @@ class CartTableViewCell: UITableViewCell {
     
     @IBOutlet weak var mLabelPriceProductCart: UILabel!
     
-    
-    @IBAction func onTouchedDeleteProductCart(_ sender: Any) {
-        print("Delete")
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

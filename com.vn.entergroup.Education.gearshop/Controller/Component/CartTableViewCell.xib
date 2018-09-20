@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="499" height="149.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên sản phẩm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVQ-wJ-A1t">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên sản phẩm" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVQ-wJ-A1t">
                         <rect key="frame" x="149.5" y="10" width="339.5" height="24"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                         <nil key="textColor"/>
@@ -31,25 +31,6 @@
                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBe-H9-THa">
-                        <rect key="frame" x="339" y="106" width="150" height="33"/>
-                        <color key="backgroundColor" red="1" green="0.24540676116374682" blue="0.28933197392796206" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="150" id="wqv-vb-ruF"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <state key="normal" title="Xoá khỏi giỏ hàng">
-                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </state>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="10"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                        <connections>
-                            <action selector="onTouchedDeleteProductCart:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pev-8w-Jpo"/>
-                        </connections>
-                    </button>
                     <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="mhk-lK-93F">
                         <rect key="frame" x="10" y="10" width="129.5" height="129.5"/>
                         <constraints>
@@ -64,10 +45,8 @@
                     <constraint firstItem="bVQ-wJ-A1t" firstAttribute="leading" secondItem="mhk-lK-93F" secondAttribute="trailing" constant="10" id="DJI-OU-as9"/>
                     <constraint firstAttribute="trailing" secondItem="bVQ-wJ-A1t" secondAttribute="trailing" constant="10" id="OQI-6D-bTv"/>
                     <constraint firstItem="bVQ-wJ-A1t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="WZw-mJ-a0G"/>
-                    <constraint firstAttribute="trailing" secondItem="LBe-H9-THa" secondAttribute="trailing" constant="10" id="Ywf-r3-8hl"/>
                     <constraint firstAttribute="trailing" secondItem="xL3-gb-vrf" secondAttribute="trailing" constant="10" id="Zjz-Lp-5Jj"/>
                     <constraint firstItem="xL3-gb-vrf" firstAttribute="top" secondItem="bVQ-wJ-A1t" secondAttribute="bottom" constant="10" id="nwf-Uy-o5b"/>
-                    <constraint firstAttribute="bottom" secondItem="LBe-H9-THa" secondAttribute="bottom" constant="10" id="ocS-Tw-Bwb"/>
                     <constraint firstItem="xL3-gb-vrf" firstAttribute="leading" secondItem="mhk-lK-93F" secondAttribute="trailing" constant="10" id="piv-bG-RhW"/>
                     <constraint firstItem="mhk-lK-93F" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="sHf-30-J6Z"/>
                     <constraint firstAttribute="bottom" secondItem="mhk-lK-93F" secondAttribute="bottom" constant="10" id="vM8-AN-YHl"/>

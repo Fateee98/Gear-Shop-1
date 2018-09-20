@@ -48,6 +48,7 @@
 		C3C0DA5121477819007DE895 /* MoreSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C0DA5021477818007DE895 /* MoreSettingViewController.swift */; };
 		C3C0DA552147B31E007DE895 /* BaseModeVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C0DA542147B31D007DE895 /* BaseModeVO.swift */; };
 		C3F1BFB0213EDB9900A44814 /* CPUModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F1BFAF213EDB9900A44814 /* CPUModel.swift */; };
+		C3F4BD6F21534F68004D5CE5 /* CheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F4BD6E21534F68004D5CE5 /* CheckOutViewController.swift */; };
 		D535A0F59C9EFBFE8CF52642 /* Pods_com_vn_entergroup_Education_gearshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3324D4482762210D3E8EBB /* Pods_com_vn_entergroup_Education_gearshop.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		C3C0DA5021477818007DE895 /* MoreSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSettingViewController.swift; sourceTree = "<group>"; };
 		C3C0DA542147B31D007DE895 /* BaseModeVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModeVO.swift; sourceTree = "<group>"; };
 		C3F1BFAF213EDB9900A44814 /* CPUModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUModel.swift; sourceTree = "<group>"; };
+		C3F4BD6E21534F68004D5CE5 /* CheckOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutViewController.swift; sourceTree = "<group>"; };
 		FC4B571416D4FBDBA98D28C8 /* Pods_com_vn_entergroup_Education_gearshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_com_vn_entergroup_Education_gearshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -187,6 +189,7 @@
 				C3C0DA5021477818007DE895 /* MoreSettingViewController.swift */,
 				C3034B70214803D3009EF423 /* SearchViewController.swift */,
 				C30BD66A214E2A6A0018446C /* CartViewController.swift */,
+				C3F4BD6E21534F68004D5CE5 /* CheckOutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -356,6 +359,8 @@
 				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
@@ -383,6 +388,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
@@ -455,6 +462,7 @@
 			files = (
 				C3574EF8213E3B960089327C /* exImage.swift in Sources */,
 				C36DC4E92140DC5C00687D28 /* RamCollectionViewCell.swift in Sources */,
+				C3F4BD6F21534F68004D5CE5 /* CheckOutViewController.swift in Sources */,
 				C3574F00213E72E20089327C /* GearItemTableViewCell.swift in Sources */,
 				C3574EF7213E3B960089327C /* exView.swift in Sources */,
 				C30BD66B214E2A6A0018446C /* CartViewController.swift in Sources */,

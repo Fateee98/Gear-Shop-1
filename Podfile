@@ -18,4 +18,5 @@ pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
 pod 'GoogleAnalytics'
+pod 'RealmSwift'
 end

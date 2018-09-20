@@ -8,10 +8,11 @@
 
 import UIKit
 import Nuke
+import RealmSwift
+import Realm
+
 class DetailProductViewController: UIViewController {
 
-    
-    
     @IBOutlet weak var mImgDetailProduct: UIImageView!
     
     @IBOutlet weak var mNameProduct: UILabel!
@@ -42,9 +43,30 @@ class DetailProductViewController: UIViewController {
     
     @IBOutlet weak var mDetailLabel6: UILabel!
     
+    let realm = try! Realm()
     
     //An nut them gio hang thi hien thong bao da them thanh cong
     @IBAction func onTouchedAddToCart(_ sender: Any) {
+        
+        //Them san pham vao gio hang
+        let cart = Cart()
+        cart.productName = mNameProduct.text!
+        cart.productPrice = mProductPrice.text!
+        if mCpuProduct != nil {
+            cart.url = (mCpuProduct?.url_image)!
+        }
+        if mRamProduct != nil {
+            cart.url = (mRamProduct?.url_image)!
+        }
+        if mMainProduct != nil {
+            cart.url = (mMainProduct?.url_image)!
+        }
+        if mVGaProduct != nil {
+            cart.url = (mVGaProduct?.url_image)!
+        }
+        try! realm.write {
+            realm.add(cart)
+        }
         
         let alert = UIAlertController(title: "Thêm thành công!", message: "Đã thêm sản phẩm vào giỏ hàng!", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
