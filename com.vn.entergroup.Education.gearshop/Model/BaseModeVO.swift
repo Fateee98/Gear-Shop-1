@@ -12,13 +12,13 @@ class BaseModeVO
 {
     var id = ""
     var name = ""
-    var price = ""
+    var price: Int
     var url_image = ""
     
     init(data: [String: AnyObject]) {
         id = data["id"] as? String ?? ""
         name = data["name"] as? String ?? ""
-        price = data["price"] as? String ?? ""
+        price = data["price"] as! Int
         url_image = data["url_image"] as? String ?? ""
 }
 }

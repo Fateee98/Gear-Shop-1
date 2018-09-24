@@ -22,7 +22,7 @@ class VGACollectionViewCell: UICollectionViewCell {
     
     func setdataVGA(data: VGAModel) {
         mLabelVGA.text = data.name
-        mPriceVGA.text = data.price
+        mPriceVGA.text = String("\(data.price) VND")
         mImgVGA.image = UIImage(named: data.url_image)
         let request = ImageRequest(urlRequest: URLRequest(url: URL(string: data.url_image)!))
         Nuke.loadImage(with: request, into: mImgVGA)

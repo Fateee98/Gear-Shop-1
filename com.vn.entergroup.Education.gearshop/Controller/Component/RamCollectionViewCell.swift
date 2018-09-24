@@ -22,7 +22,7 @@ class RamCollectionViewCell: UICollectionViewCell {
 
     func setdataRam(data: RamModel) {
         mLabelRam.text = data.name
-        mPriceRam.text = data.price
+        mPriceRam.text = String("\(data.price) VND")
         mImgRam.image = UIImage(named: data.url_image)
         let request = ImageRequest(urlRequest: URLRequest(url: URL(string: data.url_image)!))
         Nuke.loadImage(with: request, into: mImgRam)

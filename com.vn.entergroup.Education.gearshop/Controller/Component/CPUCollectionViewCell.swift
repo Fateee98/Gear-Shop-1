@@ -22,7 +22,7 @@ class CPUCollectionViewCell: UICollectionViewCell {
 
     func setdataCPU(data: CPUModel) {
         mLabelCPU.text = data.name
-        mLabelPrice.text = data.price
+        mLabelPrice.text = String("\(data.price) VND")
         mImgCPU.image = UIImage(named: data.url_image)
         let request = ImageRequest(urlRequest: URLRequest(url: URL(string: data.url_image)!))
         Nuke.loadImage(with: request, into: mImgCPU)

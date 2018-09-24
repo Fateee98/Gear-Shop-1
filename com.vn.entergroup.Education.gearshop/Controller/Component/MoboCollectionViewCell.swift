@@ -20,7 +20,7 @@ class MoboCollectionViewCell: UICollectionViewCell {
 
     func setdataMobo(data: MoboModel) {
         mLabelMobo.text = data.name
-        mPriceMobo.text = data.price
+        mPriceMobo.text = String("\(data.price) VND")
         mImgMobo.image = UIImage(named: data.url_image)
         let request = ImageRequest(urlRequest: URLRequest(url: URL(string: data.url_image)!))
         Nuke.loadImage(with: request, into: mImgMobo)

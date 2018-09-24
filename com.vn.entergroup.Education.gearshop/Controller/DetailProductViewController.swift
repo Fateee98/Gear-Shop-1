@@ -92,7 +92,7 @@ class DetailProductViewController: UIViewController {
         if mCpuProduct != nil {
             let request = ImageRequest(urlRequest: URLRequest(url: URL(string: (mCpuProduct?.url_image)!)!))
             Nuke.loadImage(with: request, into: mImgDetailProduct)
-            mProductPrice.text = mCpuProduct?.price
+            mProductPrice.text = ("\(String(describing: mCpuProduct!.price)) VND")
             mNameProduct.text = mCpuProduct?.name
             mLabel.text = "Bus ram support: "
             mDetailLabel.text = mCpuProduct?.bus_ram_support
@@ -111,7 +111,7 @@ class DetailProductViewController: UIViewController {
         if mVGaProduct != nil {
             let request = ImageRequest(urlRequest: URLRequest(url: URL(string: (mVGaProduct?.url_image)!)!))
             Nuke.loadImage(with: request, into: mImgDetailProduct)
-            mProductPrice.text = mVGaProduct?.price
+            mProductPrice.text = ("\(String(describing: mVGaProduct!.price)) VND")
             mNameProduct.text = mVGaProduct?.name
             mLabel.text = "Bus standard: "
             mDetailLabel.text = mVGaProduct?.bus_standard
@@ -130,7 +130,7 @@ class DetailProductViewController: UIViewController {
         if mRamProduct != nil {
             let request = ImageRequest(urlRequest: URLRequest(url: URL(string: (mRamProduct?.url_image)!)!))
             Nuke.loadImage(with: request, into: mImgDetailProduct)
-            mProductPrice.text = mRamProduct?.price
+            mProductPrice.text = ("\(String(describing: mRamProduct!.price)) VND")
             mNameProduct.text = mRamProduct?.name
             mLabel.text = "Bus: "
             mDetailLabel.text = mRamProduct?.bus
@@ -149,7 +149,7 @@ class DetailProductViewController: UIViewController {
         if mMainProduct != nil {
             let request = ImageRequest(urlRequest: URLRequest(url: URL(string: (mMainProduct?.url_image)!)!))
             Nuke.loadImage(with: request, into: mImgDetailProduct)
-            mProductPrice.text = mMainProduct?.price
+            mProductPrice.text = ("\(String(describing: mMainProduct!.price)) VND")
             mNameProduct.text = mMainProduct?.name
             mLabel.text = "Chipset/socket: "
             mDetailLabel.text = mMainProduct?.chipset_socket
@@ -168,7 +168,7 @@ class DetailProductViewController: UIViewController {
         {
             let request = ImageRequest(urlRequest: URLRequest(url: URL(string: (mAllProduct?.url_image)!)!))
             Nuke.loadImage(with: request, into: mImgDetailProduct)
-            mProductPrice.text = mAllProduct?.price
+            mProductPrice.text = ("\(String(describing: mAllProduct!.price)) VND")
             mNameProduct.text = mAllProduct?.name
             
             switch mScreenType {
