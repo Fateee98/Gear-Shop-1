@@ -317,6 +317,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9QL-L5-v1y"/>
                     </view>
+                    <connections>
+                        <outlet property="mAddress" destination="j1I-cT-7ec" id="1kJ-LI-Yzh"/>
+                        <outlet property="mNameCustomer" destination="17D-sV-Zhl" id="VMC-1O-UK8"/>
+                        <outlet property="mPhoneNumber" destination="bOn-pK-Kyb" id="whB-S9-p1Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PgR-kI-slf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

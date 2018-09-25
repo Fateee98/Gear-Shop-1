@@ -1,9 +1,9 @@
 //
-//  DetailProductViewController.swift
-//  com.vn.entergroup.Education.gearshop
+// DetailProductViewController.swift
+// com.vn.entergroup.Education.gearshop
 //
-//  Created by Huy Trinh Duc on 9/6/18.
-//  Copyright © 2018 Huy Trinh Duc. All rights reserved.
+// Created by Huy Trinh Duc on 9/6/18.
+// Copyright © 2018 Huy Trinh Duc. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ import RealmSwift
 import Realm
 
 class DetailProductViewController: UIViewController {
-
+    
     @IBOutlet weak var mImgDetailProduct: UIImageView!
     
     @IBOutlet weak var mNameProduct: UILabel!
@@ -49,25 +49,24 @@ class DetailProductViewController: UIViewController {
     @IBAction func onTouchedAddToCart(_ sender: Any) {
         
         //Them san pham vao gio hang
-        let cart = Cart()
-        cart.productName = mNameProduct.text!
-        cart.productPrice = mProductPrice.text!
+        let product = Product()
+        product.productName = mNameProduct.text!
+        product.productPrice = mProductPrice.text!
         if mCpuProduct != nil {
-            cart.url = (mCpuProduct?.url_image)!
+            product.url = (mCpuProduct?.url_image)!
         }
         if mRamProduct != nil {
-            cart.url = (mRamProduct?.url_image)!
+            product.url = (mRamProduct?.url_image)!
         }
         if mMainProduct != nil {
-            cart.url = (mMainProduct?.url_image)!
+            product.url = (mMainProduct?.url_image)!
         }
         if mVGaProduct != nil {
-            cart.url = (mVGaProduct?.url_image)!
+            product.url = (mVGaProduct?.url_image)!
         }
         try! realm.write {
-            realm.add(cart)
+            realm.add(product)
         }
-        
         let alert = UIAlertController(title: "Thêm thành công!", message: "Đã thêm sản phẩm vào giỏ hàng!", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
@@ -81,11 +80,11 @@ class DetailProductViewController: UIViewController {
     var mMainProduct : MoboModel?
     var mAllProduct : BaseModeVO?
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        globalView.contentSize = CGSize(width: globalView.frame.width,
-//                                        height: globalView.frame.height * 1.59)
-//    }
+    // override func viewDidAppear(_ animated: Bool) {
+    // super.viewDidAppear(animated)
+    // globalView.contentSize = CGSize(width: globalView.frame.width,
+    // height: globalView.frame.height * 1.59)
+    // }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,7 +106,7 @@ class DetailProductViewController: UIViewController {
             mLabel6.text = "Thread: "
             mDetailLabel6.text = mCpuProduct?.thread
         }
-
+        
         if mVGaProduct != nil {
             let request = ImageRequest(urlRequest: URLRequest(url: URL(string: (mVGaProduct?.url_image)!)!))
             Nuke.loadImage(with: request, into: mImgDetailProduct)
@@ -168,7 +167,7 @@ class DetailProductViewController: UIViewController {
         {
             let request = ImageRequest(urlRequest: URLRequest(url: URL(string: (mAllProduct?.url_image)!)!))
             Nuke.loadImage(with: request, into: mImgDetailProduct)
-            mProductPrice.text = ("\(String(describing: mAllProduct!.price)) VND")
+            mProductPrice.text = ("\(String(describing: mRamProduct!.price)) VND")
             mNameProduct.text = mAllProduct?.name
             
             switch mScreenType {
@@ -187,7 +186,7 @@ class DetailProductViewController: UIViewController {
         }
         removeBorderNavigation()
     }
-
+    
     func removeBorderNavigation()
     {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
