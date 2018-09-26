@@ -31,8 +31,10 @@ class MoreSettingViewController: UIViewController, FUIAuthDelegate{
         try! Auth.auth().signOut()
     }
     
-    @IBOutlet weak var mImgUsername: UIImageView!
     
+    @IBOutlet weak var mLabelGender: UILabel!
+    @IBOutlet weak var mImgUsername: UIImageView!
+    @IBOutlet weak var mLabelEmail: UILabel!
     @IBOutlet weak var mLabelUsername: UILabel!
     
     var hud = JGProgressHUD(style: .light)
@@ -96,7 +98,7 @@ class MoreSettingViewController: UIViewController, FUIAuthDelegate{
     //Ham lay thong tin nick fb
     @objc private func fetchUserData() {
         hud.show(in: self.view)
-        let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"id, email, name, picture.width(480).height(480)"])
+        let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"id, birthday, email, name, picture.width(500).height(500)"])
         graphRequest?.start(completionHandler: { (connection, result, error) in
             if error != nil {
                 print("Error",error!.localizedDescription)
@@ -105,6 +107,10 @@ class MoreSettingViewController: UIViewController, FUIAuthDelegate{
                 print(result!)
                 let field = result! as? [String:Any]
                 self.mLabelUsername.text = field!["name"] as? String
+                self.mLabelEmail.text = field!["email"] as? String
+                self.mLabelGender.text = field!["birthday"] as? String
+                print("----------")
+                print(self.mLabelGender.text)
                 if let imageURL = ((field!["picture"] as? [String: Any])?["data"] as? [String: Any])?["url"] as? String {
                     print(imageURL)
                     let url = URL(string: imageURL)
