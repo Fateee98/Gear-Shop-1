@@ -30,9 +30,16 @@ class CheckOutViewController: UIViewController{
     let product = [Product]()
     func saveToFireBase(){
         let key = ref.childByAutoId().key
+        var customer = ["id": key,"name": mNameCustomer.text! as String,"address": mAddress.text! as String,"phone":mPhoneNumber.text! as String,"Cart":[]] as [String: Any]
         for item in products{
-            let customer = ["id": key,"name": mNameCustomer.text! as String,"address": mAddress.text! as String,"phone":mPhoneNumber.text! as String,"Cart": [item.productName]] as [String : Any]
-            ref.child(key).setValue(customer)
+            let cart : [String: Any] = [
+                "Product": item.productName,
+                "Price" : item.productPrice
+            ]
+            var itemProductName = customer["Cart"] as? [[String: Any]] ?? [[String:Any]]()
+            itemProductName.append(cart)
+            customer["Cart"] = itemProductName
         }
+        ref.child(key).setValue(customer)
     }
 }

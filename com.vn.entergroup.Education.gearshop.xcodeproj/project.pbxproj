@@ -12,10 +12,10 @@
 		C30BD66B214E2A6A0018446C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30BD66A214E2A6A0018446C /* CartViewController.swift */; };
 		C30BD66E214E2F850018446C /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30BD66C214E2F850018446C /* CartTableViewCell.swift */; };
 		C30BD66F214E2F850018446C /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C30BD66D214E2F850018446C /* CartTableViewCell.xib */; };
+		C30E5EE8215BC65700097774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3574EE1213E34BE0089327C /* Main.storyboard */; };
 		C30E6FA22142304A00351DD5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30E6FA12142304A00351DD5 /* API.swift */; };
 		C31AC1DF214F5A8000FA3A28 /* libdemo-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C31AC1DE214F5A7F00FA3A28 /* libdemo-library.a */; };
 		C3574EDE213E34BE0089327C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3574EDD213E34BE0089327C /* AppDelegate.swift */; };
-		C3574EE3213E34BE0089327C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3574EE1213E34BE0089327C /* Main.storyboard */; };
 		C3574EE5213E34D10089327C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3574EE4213E34D10089327C /* Assets.xcassets */; };
 		C3574EE8213E34D10089327C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3574EE6213E34D10089327C /* LaunchScreen.storyboard */; };
 		C3574EF7213E3B960089327C /* exView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3574EF3213E3B960089327C /* exView.swift */; };
@@ -325,7 +325,7 @@
 				C3574F03213E785B0089327C /* gearitem.json in Resources */,
 				C3574EE5213E34D10089327C /* Assets.xcassets in Resources */,
 				C36DC4F02140E0ED00687D28 /* MoboCollectionViewCell.xib in Resources */,
-				C3574EE3213E34BE0089327C /* Main.storyboard in Resources */,
+				C30E5EE8215BC65700097774 /* Main.storyboard in Resources */,
 				C3574F01213E72E20089327C /* GearItemTableViewCell.xib in Resources */,
 				C30BD66F214E2F850018446C /* CartTableViewCell.xib in Resources */,
 				C36DC4F621411D5600687D28 /* GoogleService-Info.plist in Resources */,
