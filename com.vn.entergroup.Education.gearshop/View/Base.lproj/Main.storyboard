@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7XW-OB-Vxc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7XW-OB-Vxc">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -87,8 +86,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="9EL-zV-JqJ" secondAttribute="bottom" constant="10" id="RD5-Xn-DXJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Ew3-qu-Iee" kind="show" id="6m6-GU-vkf"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="P7t-lJ-Hfh">
+                                    <tableViewCell clipsSubviews="YES" tag="3" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="P7t-lJ-Hfh">
                                         <rect key="frame" x="0.0" y="255" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P7t-lJ-Hfh" id="F1R-6c-0cp">
@@ -96,7 +98,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqL-M8-UOp">
-                                                    <rect key="frame" x="10" y="10" width="321" height="23"/>
+                                                    <rect key="frame" x="10" y="10.000000000000002" width="321" height="23.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -118,7 +120,6 @@
                             <outlet property="delegate" destination="RdK-pa-ZZf" id="WXU-R0-UEz"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Cài đặt" image="support" id="iAW-g7-nH7"/>
                     <navigationItem key="navigationItem" title="Cá nhân" id="5ct-yh-kiF"/>
                     <connections>
                         <outlet property="mImgUsername" destination="lOl-lr-Nlf" id="Xc5-XT-SZ8"/>
@@ -128,11 +129,12 @@
                         <outlet property="mTableViewSettings" destination="T2z-Ti-cI7" id="ohl-aQ-TjA"/>
                         <outlet property="onTouchedCellSignOut" destination="P7t-lJ-Hfh" id="Cno-YO-8Ie"/>
                         <outlet property="onTouchedInfoUser" destination="fPk-eA-8Se" id="1G4-xF-HeS"/>
+                        <outlet property="onTouchedMyCart" destination="7dd-fR-Xf3" id="YDT-dJ-lfd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nB-gU-6BE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1279.2" y="673.89162561576359"/>
+            <point key="canvasLocation" x="-336.80000000000001" y="673.89162561576359"/>
         </scene>
         <!--Giỏ hàng của tôi-->
         <scene sceneID="KK3-B0-HSW">
@@ -228,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9I-oG-deE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1372" y="290.39408866995075"/>
+            <point key="canvasLocation" x="2314.4000000000001" y="290.39408866995075"/>
         </scene>
         <!--Check Out View Controller-->
         <scene sceneID="X3x-Ll-2XI">
@@ -260,7 +262,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="10"/>
@@ -280,7 +282,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="tel"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="10"/>
@@ -300,7 +302,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="street-address"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="10"/>
@@ -388,7 +390,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PgR-kI-slf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2136.8000000000002" y="281.5270935960591"/>
+            <point key="canvasLocation" x="3079.1999999999998" y="280.78817733990149"/>
         </scene>
         <!--Gear Shop-->
         <scene sceneID="A3f-rO-9IT">
@@ -727,7 +729,7 @@
                     <connections>
                         <segue destination="HtG-or-JqT" kind="relationship" relationship="viewControllers" id="RI4-w5-FXh"/>
                         <segue destination="l1y-VL-4h3" kind="relationship" relationship="viewControllers" id="uVD-UR-Y5q"/>
-                        <segue destination="RdK-pa-ZZf" kind="relationship" relationship="viewControllers" id="elS-kF-WF6"/>
+                        <segue destination="aLE-w4-Inx" kind="relationship" relationship="viewControllers" id="elS-kF-WF6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wq-bd-g3m" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -770,7 +772,41 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Epu-A2-XD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429.60000000000002" y="290.39408866995075"/>
+            <point key="canvasLocation" x="1372" y="290.39408866995075"/>
+        </scene>
+        <!--My Products View Controller-->
+        <scene sceneID="cTy-C8-Fec">
+            <objects>
+                <viewController storyboardIdentifier="MyProductsViewController" id="Ew3-qu-Iee" customClass="MyProductsViewController" customModule="com_vn_entergroup_Education_gearshop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P63-Ak-Tuy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bdK-DH-mtm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qOF-3C-ePZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2094" y="634"/>
+        </scene>
+        <!--Cài đặt-->
+        <scene sceneID="1Kj-pU-LdE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aLE-w4-Inx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cài đặt" image="support" id="iAW-g7-nH7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ad6-Ax-JMZ">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RdK-pa-ZZf" kind="relationship" relationship="rootViewController" id="aJa-OM-YB5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PQD-6d-Yyg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1279.2" y="673.89162561576359"/>
         </scene>
     </scenes>
     <resources>

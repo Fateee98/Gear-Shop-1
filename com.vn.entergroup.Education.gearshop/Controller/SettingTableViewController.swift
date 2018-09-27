@@ -36,6 +36,8 @@ class SettingTableViewController: UITableViewController, FUIAuthDelegate {
     
 //    @IBOutlet weak var mLabelGender: UILabel!
     
+    
+    @IBOutlet weak var onTouchedMyCart: UITableViewCell!
     @IBOutlet weak var mLabelSignInOut: UILabel!
     @IBOutlet weak var onTouchedInfoUser: UITableViewCell!
     @IBOutlet weak var onTouchedCellSignOut: UITableViewCell!
@@ -140,14 +142,15 @@ class SettingTableViewController: UITableViewController, FUIAuthDelegate {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if mLabelSignInOut.text == "Đăng xuất"
-        {
-            try! Auth.auth().signOut()
-        }
-        else
-        {
-            checkLoggedIn()
-        }
+//        if mLabelSignInOut.text == "Đăng xuất"
+//        {
+//            try! Auth.auth().signOut()
+//        }
+//        else
+//        {
+//            checkLoggedIn()
+//            onTouchedInfoUser.isEditing = false
+//        }
     }
 
     // MARK: - Table view data source

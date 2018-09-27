@@ -15,17 +15,28 @@ class CheckOutViewController: UIViewController{
     @IBOutlet weak var mAddress: UITextField!
     var ref : DatabaseReference!
     @IBAction func onTouchedCheckOut(_ sender: Any) {
-        let alert = UIAlertController(title: "Đặt hàng thành công!", message: "Chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất!", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-        saveToFireBase()
+        if mNameCustomer != nil && mPhoneNumber != nil && mAddress != nil  {
+            let alert = UIAlertController(title: "Đặt hàng thất bại!", message: "Bạn vui lòng điền hết thông tin vào các trường!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else
+        {
+            let alert = UIAlertController(title: "Đặt hàng thành công!", message: "Chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            saveToFireBase()
+        }
+
     }
     override func viewDidLoad(){
         super.viewDidLoad()
         products = realm.objects(Product.self)
         ref = Database.database().reference().child("Customer")
+        self.mPhoneNumber.keyboardType = UIKeyboardType.phonePad
         hideKeyboardWhenTappedAround()
     }
+    
     //save to firebase
     let product = [Product]()
     func saveToFireBase(){
