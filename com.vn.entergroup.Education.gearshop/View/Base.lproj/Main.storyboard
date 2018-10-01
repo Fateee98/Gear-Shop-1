@@ -145,8 +145,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="Tổng số sản phẩm: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sW6-89-vSo">
-                                <rect key="frame" x="10" y="108" width="149" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="10" y="108" width="157" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -177,19 +177,19 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsw-9L-wbk">
-                                <rect key="frame" x="169" y="108" width="86" height="20.333333333333343"/>
+                                <rect key="frame" x="177" y="108" width="78" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="Tổng giá: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzz-ef-vgn">
-                                <rect key="frame" x="10" y="139" width="74.666666666666671" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="10" y="139" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hha-SV-LZs">
-                                <rect key="frame" x="94.666666666666657" y="139" width="270.33333333333337" height="21"/>
+                                <rect key="frame" x="99" y="139" width="266" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -226,6 +226,7 @@
                     <connections>
                         <outlet property="countCart" destination="nsw-9L-wbk" id="epy-tj-04C"/>
                         <outlet property="mCartTableView" destination="IVe-ld-dTO" id="QEK-WS-fLo"/>
+                        <outlet property="sumPrice" destination="Hha-SV-LZs" id="btO-3U-frC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9I-oG-deE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -458,6 +459,9 @@
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Tìm kiếm sản phẩm" translatesAutoresizingMaskIntoConstraints="NO" id="IHH-9r-eCd">
                                 <rect key="frame" x="0.0" y="44" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8iX-uR-9y1" id="mGJ-Nl-DKq"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -477,6 +481,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mCollectionView" destination="QtL-ff-PCd" id="ZY6-en-KA6"/>
+                        <outlet property="mSearch" destination="IHH-9r-eCd" id="5jP-ru-kv9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3n-jd-l37" userLabel="First Responder" sceneMemberID="firstResponder"/>

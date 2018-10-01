@@ -15,19 +15,20 @@ class CheckOutViewController: UIViewController{
     @IBOutlet weak var mAddress: UITextField!
     var ref : DatabaseReference!
     @IBAction func onTouchedCheckOut(_ sender: Any) {
-        if mNameCustomer != nil && mPhoneNumber != nil && mAddress != nil  {
-            let alert = UIAlertController(title: "Đặt hàng thất bại!", message: "Bạn vui lòng điền hết thông tin vào các trường!", preferredStyle: UIAlertControllerStyle.alert)
+        if (mPhoneNumber.text?.isEmpty)! && (mAddress.text?.isEmpty)! && (mNameCustomer.text?.isEmpty)!
+        {
+            let alert = UIAlertController(title: "Đặt hàng thất bại!", message: "Vui lòng nhập tên!", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
+        
         else
         {
             let alert = UIAlertController(title: "Đặt hàng thành công!", message: "Chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất!", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
-            saveToFireBase()
+            self.saveToFireBase()
         }
-
     }
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -36,7 +37,6 @@ class CheckOutViewController: UIViewController{
         self.mPhoneNumber.keyboardType = UIKeyboardType.phonePad
         hideKeyboardWhenTappedAround()
     }
-    
     //save to firebase
     let product = [Product]()
     func saveToFireBase(){
@@ -54,3 +54,4 @@ class CheckOutViewController: UIViewController{
         ref.child(key).setValue(customer)
     }
 }
+

@@ -51,18 +51,23 @@ class DetailProductViewController: UIViewController {
         //Them san pham vao gio hang
         let product = Product()
         product.productName = mNameProduct.text!
-        product.productPrice = mProductPrice.text!
+        //        product.productPrice = mProductPrice.text!
         if mCpuProduct != nil {
             product.url = (mCpuProduct?.url_image)!
+            product.productPrice = (mCpuProduct?.price)!
         }
         if mRamProduct != nil {
             product.url = (mRamProduct?.url_image)!
+            product.productPrice = (mRamProduct?.price)!
         }
         if mMainProduct != nil {
             product.url = (mMainProduct?.url_image)!
+            product.productPrice = (mMainProduct?.price)!
+            
         }
         if mVGaProduct != nil {
             product.url = (mVGaProduct?.url_image)!
+            product.productPrice = (mVGaProduct?.price)!
         }
         try! realm.write {
             realm.add(product)
@@ -193,3 +198,4 @@ class DetailProductViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
     }
 }
+
