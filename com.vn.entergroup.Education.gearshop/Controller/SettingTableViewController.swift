@@ -15,32 +15,12 @@ import FirebaseUI
 
 class SettingTableViewController: UITableViewController, FUIAuthDelegate {
 
-    
     @IBOutlet var mTableViewSettings: UITableView!
     
-//    @IBOutlet weak var mButtonLogin: UIButton!
-//
-//    //Dang nhap
-//    @IBAction func onTouchedLogin(_ sender: Any) {
-//        checkLoggedIn()
-//    }
-//
-//    @IBOutlet weak var mButtonLogout: UIButton!
-//
-//
-//    //Dang xuat
-//    @IBAction func onTappedLogout(_ sender: Any) {
-//        try! Auth.auth().signOut()
-//    }
-//
     
-//    @IBOutlet weak var mLabelGender: UILabel!
-    
-    
-    @IBOutlet weak var onTouchedMyCart: UITableViewCell!
     @IBOutlet weak var mLabelSignInOut: UILabel!
+    
     @IBOutlet weak var onTouchedInfoUser: UITableViewCell!
-    @IBOutlet weak var onTouchedCellSignOut: UITableViewCell!
     @IBOutlet weak var mImgUsername: UIImageView!
     @IBOutlet weak var mLabelEmail: UILabel!
     @IBOutlet weak var mLabelUsername: UILabel!
@@ -78,7 +58,6 @@ class SettingTableViewController: UITableViewController, FUIAuthDelegate {
         Auth.auth().addStateDidChangeListener { auth, user in
             if user != nil {
                 // User is signed in.
-                self.onTouchedInfoUser.isHidden = false
                 self.mImgUsername.isHidden = false
                 self.mLabelUsername.isHidden =  false
                 self.mLabelEmail.isHidden = false
@@ -86,7 +65,6 @@ class SettingTableViewController: UITableViewController, FUIAuthDelegate {
 
             } else {
                 // No user is signed in.
-                self.onTouchedInfoUser.isHidden = true
                 self.mImgUsername.isHidden = true
                 self.mLabelUsername.isHidden =  true
                 self.mLabelEmail.isHidden = true
@@ -100,12 +78,6 @@ class SettingTableViewController: UITableViewController, FUIAuthDelegate {
         super.viewDidLoad()
         checkLoggedIn()
         mTableViewSettings.tableFooterView = UIView()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -142,15 +114,14 @@ class SettingTableViewController: UITableViewController, FUIAuthDelegate {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if mLabelSignInOut.text == "Đăng xuất"
-//        {
-//            try! Auth.auth().signOut()
-//        }
-//        else
-//        {
-//            checkLoggedIn()
-//            onTouchedInfoUser.isEditing = false
-//        }
+        if mLabelSignInOut.text == "Đăng nhập"
+        {
+            checkLoggedIn()
+        }
+        else
+        {
+            try! Auth.auth().signOut()
+        }
     }
 
     // MARK: - Table view data source

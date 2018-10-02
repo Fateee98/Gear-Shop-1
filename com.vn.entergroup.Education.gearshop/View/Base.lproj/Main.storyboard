@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7XW-OB-Vxc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7XW-OB-Vxc">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -72,23 +73,26 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giỏ hàng của tôi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EL-zV-JqJ">
-                                                    <rect key="frame" x="10" y="10.000000000000002" width="321" height="23.666666666666671"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEZ-Vt-RO4">
+                                                    <rect key="frame" x="10" y="5" width="150" height="33.666666666666664"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="UgB-vB-VAe"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <state key="normal" title="Giỏ hàng của tôi">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="Ew3-qu-Iee" kind="show" id="DPd-uq-FdJ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="9EL-zV-JqJ" firstAttribute="top" secondItem="IX3-aD-YIF" secondAttribute="top" constant="10" id="01c-a9-5En"/>
-                                                <constraint firstItem="9EL-zV-JqJ" firstAttribute="leading" secondItem="IX3-aD-YIF" secondAttribute="leading" constant="10" id="6zl-mq-bTz"/>
-                                                <constraint firstAttribute="trailing" secondItem="9EL-zV-JqJ" secondAttribute="trailing" constant="10" id="BzH-5t-VB1"/>
-                                                <constraint firstAttribute="bottom" secondItem="9EL-zV-JqJ" secondAttribute="bottom" constant="10" id="RD5-Xn-DXJ"/>
+                                                <constraint firstItem="NEZ-Vt-RO4" firstAttribute="leading" secondItem="IX3-aD-YIF" secondAttribute="leading" constant="10" id="Dal-6h-rWG"/>
+                                                <constraint firstItem="NEZ-Vt-RO4" firstAttribute="top" secondItem="IX3-aD-YIF" secondAttribute="top" constant="5" id="mo4-4h-KI0"/>
+                                                <constraint firstAttribute="bottom" secondItem="NEZ-Vt-RO4" secondAttribute="bottom" constant="5" id="r2c-Q0-yTP"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Ew3-qu-Iee" kind="show" id="6m6-GU-vkf"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" tag="3" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="P7t-lJ-Hfh">
                                         <rect key="frame" x="0.0" y="255" width="375" height="44"/>
@@ -97,18 +101,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqL-M8-UOp">
-                                                    <rect key="frame" x="10" y="10.000000000000002" width="321" height="23.666666666666671"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng nhập" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0A9-f0-XZ8">
+                                                    <rect key="frame" x="17" y="5" width="314" height="33.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="EqL-M8-UOp" secondAttribute="bottom" constant="10" id="XKZ-ND-0cp"/>
-                                                <constraint firstItem="EqL-M8-UOp" firstAttribute="top" secondItem="F1R-6c-0cp" secondAttribute="top" constant="10" id="Xvn-89-HTY"/>
-                                                <constraint firstAttribute="trailing" secondItem="EqL-M8-UOp" secondAttribute="trailing" constant="10" id="mDA-i2-Bo7"/>
-                                                <constraint firstItem="EqL-M8-UOp" firstAttribute="leading" secondItem="F1R-6c-0cp" secondAttribute="leading" constant="10" id="wgH-IS-WLE"/>
+                                                <constraint firstItem="0A9-f0-XZ8" firstAttribute="top" secondItem="F1R-6c-0cp" secondAttribute="top" constant="5" id="0l3-By-WVq"/>
+                                                <constraint firstItem="0A9-f0-XZ8" firstAttribute="leading" secondItem="F1R-6c-0cp" secondAttribute="leading" constant="17" id="F0O-MO-q2v"/>
+                                                <constraint firstAttribute="bottom" secondItem="0A9-f0-XZ8" secondAttribute="bottom" constant="5" id="YA5-4P-Deg"/>
+                                                <constraint firstAttribute="trailing" secondItem="0A9-f0-XZ8" secondAttribute="trailing" constant="10" id="oOE-p1-gft"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -124,12 +128,10 @@
                     <connections>
                         <outlet property="mImgUsername" destination="lOl-lr-Nlf" id="Xc5-XT-SZ8"/>
                         <outlet property="mLabelEmail" destination="yOg-v9-WpC" id="8Bv-T7-qjR"/>
-                        <outlet property="mLabelSignInOut" destination="EqL-M8-UOp" id="uZb-XG-SRT"/>
+                        <outlet property="mLabelSignInOut" destination="0A9-f0-XZ8" id="WKw-rs-Lud"/>
                         <outlet property="mLabelUsername" destination="3ns-2a-HgT" id="OwW-tl-qEo"/>
                         <outlet property="mTableViewSettings" destination="T2z-Ti-cI7" id="ohl-aQ-TjA"/>
-                        <outlet property="onTouchedCellSignOut" destination="P7t-lJ-Hfh" id="Cno-YO-8Ie"/>
                         <outlet property="onTouchedInfoUser" destination="fPk-eA-8Se" id="1G4-xF-HeS"/>
-                        <outlet property="onTouchedMyCart" destination="7dd-fR-Xf3" id="YDT-dJ-lfd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nB-gU-6BE" userLabel="First Responder" sceneMemberID="firstResponder"/>
