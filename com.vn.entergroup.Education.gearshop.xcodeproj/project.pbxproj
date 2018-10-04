@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7FF485828576B68CFB836658 /* Pods_com_vn_entergroup_Education_gearshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4B571416D4FBDBA98D28C8 /* Pods_com_vn_entergroup_Education_gearshop.framework */; };
-		C3034B71214803D3009EF423 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3034B70214803D3009EF423 /* SearchViewController.swift */; };
 		C30BD66B214E2A6A0018446C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30BD66A214E2A6A0018446C /* CartViewController.swift */; };
 		C30BD66E214E2F850018446C /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30BD66C214E2F850018446C /* CartTableViewCell.swift */; };
 		C30BD66F214E2F850018446C /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C30BD66D214E2F850018446C /* CartTableViewCell.xib */; };
@@ -17,6 +16,17 @@
 		C31AC1DF214F5A8000FA3A28 /* libdemo-library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C31AC1DE214F5A7F00FA3A28 /* libdemo-library.a */; };
 		C31DBCFD215D4A1200B1CAB5 /* MyProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31DBCFC215D4A1200B1CAB5 /* MyProductsViewController.swift */; };
 		C3226FE8215CBEEF00305CE1 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3226FE7215CBEEF00305CE1 /* SettingTableViewController.swift */; };
+		C325383A2165C8E4007B807E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32538392165C8E4007B807E /* LoginViewController.swift */; };
+		C325383C2165CCD1007B807E /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C325383B2165CCD1007B807E /* AdminViewController.swift */; };
+		C325383E2165D158007B807E /* AdminCategoryProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C325383D2165D158007B807E /* AdminCategoryProductViewController.swift */; };
+		C32538482165D1FA007B807E /* CPUTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32538402165D1F6007B807E /* CPUTableViewCell.xib */; };
+		C32538492165D1FA007B807E /* CPUTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32538412165D1F7007B807E /* CPUTableViewCell.swift */; };
+		C325384A2165D1FA007B807E /* MoboTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32538422165D1F8007B807E /* MoboTableViewCell.swift */; };
+		C325384B2165D1FA007B807E /* RamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32538432165D1F8007B807E /* RamTableViewCell.xib */; };
+		C325384C2165D1FA007B807E /* VGATableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32538442165D1F9007B807E /* VGATableViewCell.xib */; };
+		C325384D2165D1FA007B807E /* RamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32538452165D1F9007B807E /* RamTableViewCell.swift */; };
+		C325384E2165D1FA007B807E /* MoboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32538462165D1FA007B807E /* MoboTableViewCell.xib */; };
+		C325384F2165D1FA007B807E /* VGATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32538472165D1FA007B807E /* VGATableViewCell.swift */; };
 		C3574EDE213E34BE0089327C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3574EDD213E34BE0089327C /* AppDelegate.swift */; };
 		C3574EE5213E34D10089327C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3574EE4213E34D10089327C /* Assets.xcassets */; };
 		C3574EE8213E34D10089327C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3574EE6213E34D10089327C /* LaunchScreen.storyboard */; };
@@ -47,7 +57,6 @@
 		C3C0DA4A21477113007DE895 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C0DA4921477113007DE895 /* FBSDKCoreKit.framework */; };
 		C3C0DA4D21477341007DE895 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C0DA4C21477341007DE895 /* FBSDKCoreKit.framework */; };
 		C3C0DA4F21477366007DE895 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C0DA4E21477366007DE895 /* FBSDKLoginKit.framework */; };
-		C3C0DA5121477819007DE895 /* MoreSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C0DA5021477818007DE895 /* MoreSettingViewController.swift */; };
 		C3C0DA552147B31E007DE895 /* BaseModeVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C0DA542147B31D007DE895 /* BaseModeVO.swift */; };
 		C3F1BFB0213EDB9900A44814 /* CPUModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F1BFAF213EDB9900A44814 /* CPUModel.swift */; };
 		C3F4BD6F21534F68004D5CE5 /* CheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F4BD6E21534F68004D5CE5 /* CheckOutViewController.swift */; };
@@ -58,7 +67,6 @@
 		030E84F8E728C59EE3036F6E /* Pods-com.vn.entergroup.Education.gearshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.vn.entergroup.Education.gearshop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-com.vn.entergroup.Education.gearshop/Pods-com.vn.entergroup.Education.gearshop.debug.xcconfig"; sourceTree = "<group>"; };
 		0E3324D4482762210D3E8EBB /* Pods_com_vn_entergroup_Education_gearshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_com_vn_entergroup_Education_gearshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD609D40F75326A31BE2B42 /* Pods-com.vn.entergroup.Education.gearshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.vn.entergroup.Education.gearshop.release.xcconfig"; path = "Pods/Target Support Files/Pods-com.vn.entergroup.Education.gearshop/Pods-com.vn.entergroup.Education.gearshop.release.xcconfig"; sourceTree = "<group>"; };
-		C3034B70214803D3009EF423 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C30BD66A214E2A6A0018446C /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		C30BD66C214E2F850018446C /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		C30BD66D214E2F850018446C /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
@@ -66,6 +74,17 @@
 		C31AC1DE214F5A7F00FA3A28 /* libdemo-library.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libdemo-library.a"; path = "library/libdemo-library.a"; sourceTree = SOURCE_ROOT; };
 		C31DBCFC215D4A1200B1CAB5 /* MyProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductsViewController.swift; sourceTree = "<group>"; };
 		C3226FE7215CBEEF00305CE1 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		C32538392165C8E4007B807E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C325383B2165CCD1007B807E /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		C325383D2165D158007B807E /* AdminCategoryProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCategoryProductViewController.swift; sourceTree = "<group>"; };
+		C32538402165D1F6007B807E /* CPUTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPUTableViewCell.xib; sourceTree = "<group>"; };
+		C32538412165D1F7007B807E /* CPUTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPUTableViewCell.swift; sourceTree = "<group>"; };
+		C32538422165D1F8007B807E /* MoboTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoboTableViewCell.swift; sourceTree = "<group>"; };
+		C32538432165D1F8007B807E /* RamTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RamTableViewCell.xib; sourceTree = "<group>"; };
+		C32538442165D1F9007B807E /* VGATableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VGATableViewCell.xib; sourceTree = "<group>"; };
+		C32538452165D1F9007B807E /* RamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RamTableViewCell.swift; sourceTree = "<group>"; };
+		C32538462165D1FA007B807E /* MoboTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoboTableViewCell.xib; sourceTree = "<group>"; };
+		C32538472165D1FA007B807E /* VGATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGATableViewCell.swift; sourceTree = "<group>"; };
 		C3574EDA213E34BE0089327C /* com.vn.entergroup.Education.gearshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = com.vn.entergroup.Education.gearshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3574EDD213E34BE0089327C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3574EE2213E34BE0089327C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,7 +119,6 @@
 		C3C0DA4921477113007DE895 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C0DA4C21477341007DE895 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		C3C0DA4E21477366007DE895 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		C3C0DA5021477818007DE895 /* MoreSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSettingViewController.swift; sourceTree = "<group>"; };
 		C3C0DA542147B31D007DE895 /* BaseModeVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModeVO.swift; sourceTree = "<group>"; };
 		C3F1BFAF213EDB9900A44814 /* CPUModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUModel.swift; sourceTree = "<group>"; };
 		C3F4BD6E21534F68004D5CE5 /* CheckOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +142,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C325383F2165D1AE007B807E /* AdminComponent */ = {
+			isa = PBXGroup;
+			children = (
+				C32538412165D1F7007B807E /* CPUTableViewCell.swift */,
+				C32538402165D1F6007B807E /* CPUTableViewCell.xib */,
+				C32538422165D1F8007B807E /* MoboTableViewCell.swift */,
+				C32538462165D1FA007B807E /* MoboTableViewCell.xib */,
+				C32538452165D1F9007B807E /* RamTableViewCell.swift */,
+				C32538432165D1F8007B807E /* RamTableViewCell.xib */,
+				C32538472165D1FA007B807E /* VGATableViewCell.swift */,
+				C32538442165D1F9007B807E /* VGATableViewCell.xib */,
+			);
+			path = AdminComponent;
+			sourceTree = "<group>";
+		};
 		C3574ED1213E34BE0089327C = {
 			isa = PBXGroup;
 			children = (
@@ -185,17 +218,19 @@
 		C3574EF1213E371F0089327C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C325383F2165D1AE007B807E /* AdminComponent */,
 				C3574EFD213E72AF0089327C /* Component */,
 				C3574EFB213E3D020089327C /* HomeViewController.swift */,
 				C3574F06213E7FC60089327C /* CategoryProductViewController.swift */,
 				C36DC4F32141123400687D28 /* DetailProductViewController.swift */,
 				C30E6FA12142304A00351DD5 /* API.swift */,
-				C3C0DA5021477818007DE895 /* MoreSettingViewController.swift */,
-				C3034B70214803D3009EF423 /* SearchViewController.swift */,
 				C30BD66A214E2A6A0018446C /* CartViewController.swift */,
 				C3F4BD6E21534F68004D5CE5 /* CheckOutViewController.swift */,
 				C3226FE7215CBEEF00305CE1 /* SettingTableViewController.swift */,
 				C31DBCFC215D4A1200B1CAB5 /* MyProductsViewController.swift */,
+				C32538392165C8E4007B807E /* LoginViewController.swift */,
+				C325383B2165CCD1007B807E /* AdminViewController.swift */,
+				C325383D2165D158007B807E /* AdminCategoryProductViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -326,12 +361,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C32538482165D1FA007B807E /* CPUTableViewCell.xib in Resources */,
+				C325384E2165D1FA007B807E /* MoboTableViewCell.xib in Resources */,
 				C3574F11213E9A8A0089327C /* VGACollectionViewCell.xib in Resources */,
 				C3574EE8213E34D10089327C /* LaunchScreen.storyboard in Resources */,
 				C3574F03213E785B0089327C /* gearitem.json in Resources */,
+				C325384C2165D1FA007B807E /* VGATableViewCell.xib in Resources */,
 				C3574EE5213E34D10089327C /* Assets.xcassets in Resources */,
 				C36DC4F02140E0ED00687D28 /* MoboCollectionViewCell.xib in Resources */,
 				C30E5EE8215BC65700097774 /* Main.storyboard in Resources */,
+				C325384B2165D1FA007B807E /* RamTableViewCell.xib in Resources */,
 				C3574F01213E72E20089327C /* GearItemTableViewCell.xib in Resources */,
 				C30BD66F214E2F850018446C /* CartTableViewCell.xib in Resources */,
 				C36DC4F621411D5600687D28 /* GoogleService-Info.plist in Resources */,
@@ -466,14 +505,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C325383A2165C8E4007B807E /* LoginViewController.swift in Sources */,
 				C3574EF8213E3B960089327C /* exImage.swift in Sources */,
 				C36DC4E92140DC5C00687D28 /* RamCollectionViewCell.swift in Sources */,
 				C3F4BD6F21534F68004D5CE5 /* CheckOutViewController.swift in Sources */,
+				C325383C2165CCD1007B807E /* AdminViewController.swift in Sources */,
+				C325384F2165D1FA007B807E /* VGATableViewCell.swift in Sources */,
 				C3574F00213E72E20089327C /* GearItemTableViewCell.swift in Sources */,
 				C3574EF7213E3B960089327C /* exView.swift in Sources */,
 				C30BD66B214E2A6A0018446C /* CartViewController.swift in Sources */,
+				C325383E2165D158007B807E /* AdminCategoryProductViewController.swift in Sources */,
 				C3574EFA213E3B960089327C /* exString.swift in Sources */,
-				C3C0DA5121477819007DE895 /* MoreSettingViewController.swift in Sources */,
 				C36DC4EF2140E0ED00687D28 /* MoboCollectionViewCell.swift in Sources */,
 				C3574F07213E7FC60089327C /* CategoryProductViewController.swift in Sources */,
 				C31DBCFD215D4A1200B1CAB5 /* MyProductsViewController.swift in Sources */,
@@ -484,12 +526,14 @@
 				C3574F0C213E9A700089327C /* CPUCollectionViewCell.swift in Sources */,
 				C3226FE8215CBEEF00305CE1 /* SettingTableViewController.swift in Sources */,
 				C3574F10213E9A8A0089327C /* VGACollectionViewCell.swift in Sources */,
+				C325384D2165D1FA007B807E /* RamTableViewCell.swift in Sources */,
+				C32538492165D1FA007B807E /* CPUTableViewCell.swift in Sources */,
 				C36DC4EC2140DE2E00687D28 /* RamModel.swift in Sources */,
 				C30E6FA22142304A00351DD5 /* API.swift in Sources */,
 				C30BD66E214E2F850018446C /* CartTableViewCell.swift in Sources */,
 				C3574F05213E78780089327C /* CategoryModel.swift in Sources */,
-				C3034B71214803D3009EF423 /* SearchViewController.swift in Sources */,
 				C3574F09213E982D0089327C /* Constant.swift in Sources */,
+				C325384A2165D1FA007B807E /* MoboTableViewCell.swift in Sources */,
 				C3574EDE213E34BE0089327C /* AppDelegate.swift in Sources */,
 				C3C0DA552147B31E007DE895 /* BaseModeVO.swift in Sources */,
 				C36DC4E62140DA4C00687D28 /* VGAModel.swift in Sources */,

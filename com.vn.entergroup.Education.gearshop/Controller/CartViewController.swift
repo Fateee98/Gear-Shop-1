@@ -74,7 +74,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell") as! CartTableViewCell
         let product = products[indexPath.row]
         cell.mLabelNameProductCart.text = product.productName
-        cell.mLabelPriceProductCart.text = ("\(String(describing: product.productPrice)) VND")
+        cell.mLabelPriceProductCart.text = API().formatMoney(money: String(product.productPrice))
         let request = ImageRequest(urlRequest: URLRequest(url: URL(string: product.url)!))
         Nuke.loadImage(with: request, into: cell.mImgProductCart)
         return cell
@@ -90,7 +90,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         for int in a {
             sum += int
         }
-        sumPrice.text = String("\(sum) VND")
+        sumPrice.text = API().formatMoney(money: String(sum))
     }
 }
 //Object Product Realm

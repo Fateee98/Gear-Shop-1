@@ -78,6 +78,8 @@ class DetailProductViewController: UIViewController {
         
     }
     
+    var cutStringmoney = API()
+    
     var mScreenType = screenType.cpu
     var mCpuProduct : CPUModel?
     var mVGaProduct : VGAModel?
@@ -96,7 +98,7 @@ class DetailProductViewController: UIViewController {
         if mCpuProduct != nil {
             let request = ImageRequest(urlRequest: URLRequest(url: URL(string: (mCpuProduct?.url_image)!)!))
             Nuke.loadImage(with: request, into: mImgDetailProduct)
-            mProductPrice.text = ("\(String(describing: mCpuProduct!.price)) VND")
+            mProductPrice.text = API().formatMoney(money: String(describing: mCpuProduct!.price))
             mNameProduct.text = mCpuProduct?.name
             mLabel.text = "Bus ram support: "
             mDetailLabel.text = mCpuProduct?.bus_ram_support
@@ -115,7 +117,7 @@ class DetailProductViewController: UIViewController {
         if mVGaProduct != nil {
             let request = ImageRequest(urlRequest: URLRequest(url: URL(string: (mVGaProduct?.url_image)!)!))
             Nuke.loadImage(with: request, into: mImgDetailProduct)
-            mProductPrice.text = ("\(String(describing: mVGaProduct!.price)) VND")
+            mProductPrice.text = API().formatMoney(money: String(describing: mVGaProduct!.price))
             mNameProduct.text = mVGaProduct?.name
             mLabel.text = "Bus standard: "
             mDetailLabel.text = mVGaProduct?.bus_standard
@@ -134,7 +136,7 @@ class DetailProductViewController: UIViewController {
         if mRamProduct != nil {
             let request = ImageRequest(urlRequest: URLRequest(url: URL(string: (mRamProduct?.url_image)!)!))
             Nuke.loadImage(with: request, into: mImgDetailProduct)
-            mProductPrice.text = ("\(String(describing: mRamProduct!.price)) VND")
+            mProductPrice.text = API().formatMoney(money: String(describing: mRamProduct!.price))
             mNameProduct.text = mRamProduct?.name
             mLabel.text = "Bus: "
             mDetailLabel.text = mRamProduct?.bus
@@ -153,7 +155,7 @@ class DetailProductViewController: UIViewController {
         if mMainProduct != nil {
             let request = ImageRequest(urlRequest: URLRequest(url: URL(string: (mMainProduct?.url_image)!)!))
             Nuke.loadImage(with: request, into: mImgDetailProduct)
-            mProductPrice.text = ("\(String(describing: mMainProduct!.price)) VND")
+            mProductPrice.text = API().formatMoney(money: String(describing: mMainProduct!.price))
             mNameProduct.text = mMainProduct?.name
             mLabel.text = "Chipset/socket: "
             mDetailLabel.text = mMainProduct?.chipset_socket
@@ -168,27 +170,7 @@ class DetailProductViewController: UIViewController {
             mLabel6.isHidden = true
             mDetailLabel6.isHidden = true
         }
-        if mAllProduct != nil
-        {
-            let request = ImageRequest(urlRequest: URLRequest(url: URL(string: (mAllProduct?.url_image)!)!))
-            Nuke.loadImage(with: request, into: mImgDetailProduct)
-            mProductPrice.text = ("\(String(describing: mRamProduct!.price)) VND")
-            mNameProduct.text = mAllProduct?.name
-            
-            switch mScreenType {
-            case screenType.cpu:
-                return mLabel.text = "1"
-            case screenType.vga:
-                return mLabel.text = "2"
-            case screenType.ram:
-                return mLabel.text = "3"
-            case screenType.mobo:
-                return mLabel.text = "4"
-                
-            default:
-                return
-            }
-        }
+        
         removeBorderNavigation()
     }
     

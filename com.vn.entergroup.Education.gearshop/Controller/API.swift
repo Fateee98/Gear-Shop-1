@@ -73,5 +73,20 @@ class API
             }
         }
     }
-    
+    func formatMoney(money: String) -> String{
+        if money == "" {
+            return "0 VND"
+        }
+        var strResult = money
+        var k = 0
+        for i in (1..<money.count).reversed(){
+            k = k+1
+            if k%3 == 0{
+                let index = money.index(money.startIndex, offsetBy: i)
+                strResult.insert(".", at: index)
+            }
+        }
+        strResult = strResult + " VND"
+        return strResult
+    }
 }
