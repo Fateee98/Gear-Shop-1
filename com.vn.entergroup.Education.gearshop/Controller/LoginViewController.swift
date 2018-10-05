@@ -16,6 +16,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var mTextFieldUsername: UITextField!
     @IBOutlet weak var mTextFieldPassword: UITextField!
     
+
+    @IBAction func onTouchedRegister(_ sender: Any) {
+        let popView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PopupRegisterViewController") as! PopupRegisterViewController
+        self.addChildViewController(popView)
+        popView.view.frame = self.view.frame
+        self.view.addSubview(popView.view)
+        popView.didMove(toParentViewController: self)
+        
+        
+    }
+    
     @IBAction func onTouchedLoginButton(_ sender: Any) {
 //        hud.textLabel.text = "Logging in with Facebook..."
 //        hud.show(in: view, animated: true)

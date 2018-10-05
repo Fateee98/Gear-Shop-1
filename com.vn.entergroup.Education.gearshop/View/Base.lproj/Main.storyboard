@@ -736,7 +736,7 @@
         <!--Login View Controller-->
         <scene sceneID="Njn-Ry-2Pz">
             <objects>
-                <viewController id="N9A-8N-P0b" customClass="LoginViewController" customModule="com_vn_entergroup_Education_gearshop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="N9A-8N-P0b" customClass="LoginViewController" customModule="com_vn_entergroup_Education_gearshop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jZB-sO-eeK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -836,6 +836,9 @@
                                         <state key="normal" title="Đăng ký">
                                             <color key="titleColor" red="1" green="0.18095168320866195" blue="0.23555297011923304" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onTouchedRegister:" destination="N9A-8N-P0b" eventType="touchUpInside" id="rhr-Gc-6N4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -875,6 +878,127 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yX1-Ef-V6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="527.20000000000005" y="691.62561576354688"/>
+        </scene>
+        <!--Popup Register View Controller-->
+        <scene sceneID="wwh-dZ-DjA">
+            <objects>
+                <viewController storyboardIdentifier="PopupRegisterViewController" id="BSc-EB-GIg" customClass="PopupRegisterViewController" customModule="com_vn_entergroup_Education_gearshop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Aa-Gp-em3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UbT-db-9g0">
+                                <rect key="frame" x="40" y="244" width="295" height="334"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tên đăng nhập " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nos-wH-sOj">
+                                        <rect key="frame" x="20" y="30" width="255" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="GRv-73-WUh"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mật khẩu" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBi-pM-GzD">
+                                        <rect key="frame" x="20" y="95" width="255" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="3Nq-bq-blt"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFO-IO-qDP">
+                                        <rect key="frame" x="20" y="281" width="50" height="33"/>
+                                        <color key="backgroundColor" red="1" green="0.30152840368517508" blue="0.37097132303702662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="ime-Pb-RnX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Huỷ">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onTouchedCancel:" destination="BSc-EB-GIg" eventType="touchUpInside" id="Oiv-bg-iUC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vB-lc-cHd">
+                                        <rect key="frame" x="205" y="284" width="70" height="30"/>
+                                        <color key="backgroundColor" red="0.39288957997306562" green="0.44926578809392415" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="dHI-bL-XHI"/>
+                                        </constraints>
+                                        <state key="normal" title="Đăng ký">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onTouchedRegister:" destination="BSc-EB-GIg" eventType="touchUpInside" id="Rnn-d9-owt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="GFO-IO-qDP" firstAttribute="leading" secondItem="UbT-db-9g0" secondAttribute="leading" constant="20" id="0kk-rz-FP6"/>
+                                    <constraint firstItem="EBi-pM-GzD" firstAttribute="top" secondItem="nos-wH-sOj" secondAttribute="bottom" constant="30" id="75K-KI-jxY"/>
+                                    <constraint firstItem="EBi-pM-GzD" firstAttribute="leading" secondItem="UbT-db-9g0" secondAttribute="leading" constant="20" id="7cg-ak-2R3"/>
+                                    <constraint firstAttribute="bottom" secondItem="6vB-lc-cHd" secondAttribute="bottom" constant="20" id="ATY-uw-bIV"/>
+                                    <constraint firstItem="nos-wH-sOj" firstAttribute="leading" secondItem="UbT-db-9g0" secondAttribute="leading" constant="20" id="DpL-ul-auM"/>
+                                    <constraint firstAttribute="bottom" secondItem="GFO-IO-qDP" secondAttribute="bottom" constant="20" id="MQ8-Tq-4y0"/>
+                                    <constraint firstAttribute="trailing" secondItem="EBi-pM-GzD" secondAttribute="trailing" constant="20" id="Ngd-NY-f8b"/>
+                                    <constraint firstItem="nos-wH-sOj" firstAttribute="top" secondItem="UbT-db-9g0" secondAttribute="top" constant="30" id="foh-r5-MLy"/>
+                                    <constraint firstAttribute="trailing" secondItem="nos-wH-sOj" secondAttribute="trailing" constant="20" id="gnE-Ce-upL"/>
+                                    <constraint firstAttribute="trailing" secondItem="6vB-lc-cHd" secondAttribute="trailing" constant="20" id="snV-Ou-q6W"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6OD-fx-R2a" firstAttribute="trailing" secondItem="UbT-db-9g0" secondAttribute="trailing" constant="40" id="2jG-p2-Fdj"/>
+                            <constraint firstItem="UbT-db-9g0" firstAttribute="leading" secondItem="6OD-fx-R2a" secondAttribute="leading" constant="40" id="4w1-DZ-5aY"/>
+                            <constraint firstItem="UbT-db-9g0" firstAttribute="centerX" secondItem="6OD-fx-R2a" secondAttribute="centerX" id="6vZ-W2-qQ3"/>
+                            <constraint firstItem="UbT-db-9g0" firstAttribute="centerY" secondItem="6OD-fx-R2a" secondAttribute="centerY" id="I1j-46-Ivh"/>
+                            <constraint firstItem="UbT-db-9g0" firstAttribute="top" secondItem="6OD-fx-R2a" secondAttribute="top" constant="200" id="VgA-Kr-RnI"/>
+                            <constraint firstItem="6OD-fx-R2a" firstAttribute="bottom" secondItem="UbT-db-9g0" secondAttribute="bottom" constant="200" id="hYz-pC-JT6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6OD-fx-R2a"/>
+                    </view>
+                    <connections>
+                        <outlet property="mPopupView" destination="UbT-db-9g0" id="WkZ-no-1Mh"/>
+                        <outlet property="mTextFieldPassword" destination="EBi-pM-GzD" id="Pha-Cd-fET"/>
+                        <outlet property="mTextFieldUsername" destination="nos-wH-sOj" id="FDL-jI-hkY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5fO-If-vl5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="1350.7389162561576"/>
         </scene>
         <!--Quản lý tài khoản-->
         <scene sceneID="MTN-MW-pv3">

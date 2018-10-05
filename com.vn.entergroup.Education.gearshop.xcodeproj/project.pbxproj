@@ -27,6 +27,7 @@
 		C325384D2165D1FA007B807E /* RamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32538452165D1F9007B807E /* RamTableViewCell.swift */; };
 		C325384E2165D1FA007B807E /* MoboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32538462165D1FA007B807E /* MoboTableViewCell.xib */; };
 		C325384F2165D1FA007B807E /* VGATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32538472165D1FA007B807E /* VGATableViewCell.swift */; };
+		C325385121671CDB007B807E /* PopupRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C325385021671CDA007B807E /* PopupRegisterViewController.swift */; };
 		C3574EDE213E34BE0089327C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3574EDD213E34BE0089327C /* AppDelegate.swift */; };
 		C3574EE5213E34D10089327C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3574EE4213E34D10089327C /* Assets.xcassets */; };
 		C3574EE8213E34D10089327C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3574EE6213E34D10089327C /* LaunchScreen.storyboard */; };
@@ -85,6 +86,7 @@
 		C32538452165D1F9007B807E /* RamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RamTableViewCell.swift; sourceTree = "<group>"; };
 		C32538462165D1FA007B807E /* MoboTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoboTableViewCell.xib; sourceTree = "<group>"; };
 		C32538472165D1FA007B807E /* VGATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGATableViewCell.swift; sourceTree = "<group>"; };
+		C325385021671CDA007B807E /* PopupRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupRegisterViewController.swift; sourceTree = "<group>"; };
 		C3574EDA213E34BE0089327C /* com.vn.entergroup.Education.gearshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = com.vn.entergroup.Education.gearshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3574EDD213E34BE0089327C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3574EE2213E34BE0089327C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				C32538392165C8E4007B807E /* LoginViewController.swift */,
 				C325383B2165CCD1007B807E /* AdminViewController.swift */,
 				C325383D2165D158007B807E /* AdminCategoryProductViewController.swift */,
+				C325385021671CDA007B807E /* PopupRegisterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				C3574EDE213E34BE0089327C /* AppDelegate.swift in Sources */,
 				C3C0DA552147B31E007DE895 /* BaseModeVO.swift in Sources */,
 				C36DC4E62140DA4C00687D28 /* VGAModel.swift in Sources */,
+				C325385121671CDB007B807E /* PopupRegisterViewController.swift in Sources */,
 				C3574EFC213E3D020089327C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
