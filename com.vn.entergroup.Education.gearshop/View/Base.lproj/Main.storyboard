@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7XW-OB-Vxc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7XW-OB-Vxc">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -106,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9I-oG-deE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3256.8000000000002" y="290.39408866995075"/>
+            <point key="canvasLocation" x="4031" y="233"/>
         </scene>
         <!--Check Out View Controller-->
         <scene sceneID="X3x-Ll-2XI">
@@ -266,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PgR-kI-slf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4021.5999999999999" y="280.78817733990149"/>
+            <point key="canvasLocation" x="4886" y="233"/>
         </scene>
         <!--Gear Shop-->
         <scene sceneID="A3f-rO-9IT">
@@ -652,18 +651,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Epu-A2-XD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2314.4000000000001" y="290.39408866995075"/>
+            <point key="canvasLocation" x="3364" y="273"/>
         </scene>
-        <!--Admin View Controller-->
+        <!--Quản lý sản phẩm-->
         <scene sceneID="cTy-C8-Fec">
             <objects>
-                <viewController storyboardIdentifier="MyProductsViewController" id="Ew3-qu-Iee" customClass="AdminViewController" customModule="com_vn_entergroup_Education_gearshop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdminViewController" id="Ew3-qu-Iee" customClass="AdminViewController" customModule="com_vn_entergroup_Education_gearshop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P63-Ak-Tuy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jof-7p-9V8">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="597"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Ew3-qu-Iee" id="OL8-1t-43D"/>
@@ -680,6 +679,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bdK-DH-mtm"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Quản lý sản phẩm" id="ax9-lJ-eSZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nea-b9-IF7">
+                            <connections>
+                                <segue destination="zBw-0E-5ma" kind="show" id="krP-RX-uQ5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mGearItemTableView" destination="Jof-7p-9V8" id="MF8-mc-Yay"/>
                     </connections>
@@ -731,7 +739,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKJ-to-AsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1962" y="1092"/>
+            <point key="canvasLocation" x="2714" y="1241"/>
+        </scene>
+        <!--Thêm sản phẩm-->
+        <scene sceneID="Y7c-Nf-tii">
+            <objects>
+                <viewController id="zBw-0E-5ma" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eQd-ra-eBI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên sản phẩm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8a-W9-yhO">
+                                <rect key="frame" x="10" y="118" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loại sản phẩm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E90-Xi-78B">
+                                <rect key="frame" x="9.9999999999999929" y="149" width="110.33333333333331" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0PL-1u-gYp">
+                                <rect key="frame" x="127" y="108" width="238" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0PL-1u-gYp" firstAttribute="top" secondItem="fU2-qX-u8T" secondAttribute="top" constant="20" id="6ZO-0i-J4W"/>
+                            <constraint firstItem="0PL-1u-gYp" firstAttribute="leading" secondItem="A8a-W9-yhO" secondAttribute="trailing" constant="10" id="AuM-qO-qcS"/>
+                            <constraint firstItem="A8a-W9-yhO" firstAttribute="top" secondItem="fU2-qX-u8T" secondAttribute="top" constant="30" id="BPf-9z-Mdx"/>
+                            <constraint firstItem="E90-Xi-78B" firstAttribute="leading" secondItem="fU2-qX-u8T" secondAttribute="leading" constant="10" id="LxJ-1m-Kr9"/>
+                            <constraint firstItem="fU2-qX-u8T" firstAttribute="trailing" secondItem="0PL-1u-gYp" secondAttribute="trailing" constant="10" id="MaP-WK-l1K"/>
+                            <constraint firstItem="E90-Xi-78B" firstAttribute="top" secondItem="A8a-W9-yhO" secondAttribute="bottom" constant="10" id="Xao-MN-u0l"/>
+                            <constraint firstItem="A8a-W9-yhO" firstAttribute="leading" secondItem="fU2-qX-u8T" secondAttribute="leading" constant="10" id="wMH-ec-yeN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fU2-qX-u8T"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Thêm sản phẩm" id="o6g-pF-G07"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bvc-LK-vjx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2088.8000000000002" y="636.94581280788179"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Njn-Ry-2Pz">
@@ -762,7 +815,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="15"/>
@@ -786,7 +839,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onTouchedLoginButton:" destination="N9A-8N-P0b" eventType="touchUpInside" id="pDz-Sz-2hb"/>
-                                    <segue destination="Ew3-qu-Iee" kind="show" id="E0W-Rr-7Fo"/>
+                                    <segue destination="Ew3-qu-Iee" kind="show" id="DTN-5Q-Dd5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioD-0r-3sL">
@@ -891,7 +944,7 @@
                                 <rect key="frame" x="40" y="244" width="295" height="334"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tên đăng nhập " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nos-wH-sOj">
-                                        <rect key="frame" x="20" y="30" width="255" height="35"/>
+                                        <rect key="frame" x="20" y="80" width="255" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="GRv-73-WUh"/>
                                         </constraints>
@@ -902,10 +955,16 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mật khẩu" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBi-pM-GzD">
-                                        <rect key="frame" x="20" y="95" width="255" height="35"/>
+                                        <rect key="frame" x="20" y="145" width="255" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="3Nq-bq-blt"/>
                                         </constraints>
@@ -916,13 +975,19 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFO-IO-qDP">
-                                        <rect key="frame" x="20" y="281" width="50" height="33"/>
+                                        <rect key="frame" x="20" y="281" width="100" height="33"/>
                                         <color key="backgroundColor" red="1" green="0.30152840368517508" blue="0.37097132303702662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="ime-Pb-RnX"/>
+                                            <constraint firstAttribute="width" constant="100" id="ime-Pb-RnX"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Huỷ">
@@ -932,23 +997,36 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="onTouchedCancel:" destination="BSc-EB-GIg" eventType="touchUpInside" id="Oiv-bg-iUC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vB-lc-cHd">
-                                        <rect key="frame" x="205" y="284" width="70" height="30"/>
+                                        <rect key="frame" x="175" y="281" width="100" height="33"/>
                                         <color key="backgroundColor" red="0.39288957997306562" green="0.44926578809392415" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="dHI-bL-XHI"/>
+                                            <constraint firstAttribute="width" constant="100" id="dHI-bL-XHI"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Đăng ký">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -965,7 +1043,7 @@
                                     <constraint firstItem="nos-wH-sOj" firstAttribute="leading" secondItem="UbT-db-9g0" secondAttribute="leading" constant="20" id="DpL-ul-auM"/>
                                     <constraint firstAttribute="bottom" secondItem="GFO-IO-qDP" secondAttribute="bottom" constant="20" id="MQ8-Tq-4y0"/>
                                     <constraint firstAttribute="trailing" secondItem="EBi-pM-GzD" secondAttribute="trailing" constant="20" id="Ngd-NY-f8b"/>
-                                    <constraint firstItem="nos-wH-sOj" firstAttribute="top" secondItem="UbT-db-9g0" secondAttribute="top" constant="30" id="foh-r5-MLy"/>
+                                    <constraint firstItem="nos-wH-sOj" firstAttribute="top" secondItem="UbT-db-9g0" secondAttribute="top" constant="80" id="foh-r5-MLy"/>
                                     <constraint firstAttribute="trailing" secondItem="nos-wH-sOj" secondAttribute="trailing" constant="20" id="gnE-Ce-upL"/>
                                     <constraint firstAttribute="trailing" secondItem="6vB-lc-cHd" secondAttribute="trailing" constant="20" id="snV-Ou-q6W"/>
                                 </constraints>
@@ -1031,7 +1109,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tài khoản Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GN2-l2-aG0">
-                                                    <rect key="frame" x="117" y="44" width="248" height="21"/>
+                                                    <rect key="frame" x="117.66666666666667" y="44" width="247.33333333333331" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1164,7 +1242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W56-8N-ndv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1754" y="1776"/>
+            <point key="canvasLocation" x="1953" y="1996"/>
         </scene>
         <!--Cá nhân-->
         <scene sceneID="V7M-ez-a4J">

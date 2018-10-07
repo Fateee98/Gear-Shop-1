@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class PopupRegisterViewController: UIViewController {
 
     @IBOutlet weak var mPopupView: UIView!
@@ -18,7 +18,26 @@ class PopupRegisterViewController: UIViewController {
     }
     
     @IBAction func onTouchedRegister(_ sender: Any) {
-        
+        if (mTextFieldUsername.text?.isEmpty)! {
+            let alert = UIAlertController(title: "Đăng ký thất bại!", message: "Vui lòng nhập email!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else if (mTextFieldPassword.text?.isEmpty)!
+        {
+            let alert = UIAlertController(title: "Đăng ký thất bại!", message: "Vui lòng nhập mật khẩu!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else
+        {
+            Auth.auth().createUser(withEmail: mTextFieldUsername.text!, password: mTextFieldPassword.text!) { (authResult, error) in
+                
+            }
+            let alert = UIAlertController(title: "Đăng ký thành công!", message: "Bạn có thể tắt cửa sổ này và đăng nhập", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBOutlet weak var mTextFieldUsername: UITextField!

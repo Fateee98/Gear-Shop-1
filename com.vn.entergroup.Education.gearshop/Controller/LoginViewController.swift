@@ -16,32 +16,33 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var mTextFieldUsername: UITextField!
     @IBOutlet weak var mTextFieldPassword: UITextField!
     
-
     @IBAction func onTouchedRegister(_ sender: Any) {
         let popView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PopupRegisterViewController") as! PopupRegisterViewController
         self.addChildViewController(popView)
         popView.view.frame = self.view.frame
         self.view.addSubview(popView.view)
         popView.didMove(toParentViewController: self)
-        
-        
     }
     
     @IBAction func onTouchedLoginButton(_ sender: Any) {
-//        hud.textLabel.text = "Logging in with Facebook..."
-//        hud.show(in: view, animated: true)
-//        let loginManager = LoginManager()
-//        loginManager.logIn(readPermissions: [.publicProfile, .email], viewController: self) { (result) in
-//            switch result {
-//            case .success(grantedPermissions: _, declinedPermissions: _, token: _):
-//                print("Succesfully logged in into Facebook.")
-//                self.signIntoFirebase()
-//            case .failed(let err):
-//                Service.dismissHud(self.hud, text: "Error", detailText: "Failed to get Facebook user with error: \(err)", delay: 3)
-//            case .cancelled:
-//                Service.dismissHud(self.hud, text: "Error", detailText: "Canceled getting Facebook user.", delay: 3)
-//            }
-//        }
+        if (mTextFieldUsername.text?.isEmpty)!
+        {
+            let alert = UIAlertController(title: "Đăng nhập thất bại!", message: "Vui lòng nhập tên email!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else if (mTextFieldPassword.text?.isEmpty)!
+        {
+            let alert = UIAlertController(title: "Đăng nhập thất bại!", message: "Vui lòng nhập mật khẩu!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else if mTextFieldUsername.text == "admin" && mTextFieldPassword.text == "123456"
+        {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "AdminViewController") as! AdminViewController
+//            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     @IBAction func onTouchedLoginFB(_ sender: Any) {
         
